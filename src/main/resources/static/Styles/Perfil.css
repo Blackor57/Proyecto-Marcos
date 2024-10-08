@@ -1,0 +1,71 @@
+.perfil-container {
+    font-family: "Teachers", 'Times New Roman', Times, serif;
+    text-align: center;
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 40px auto 0; /* Margen superior de 30px y centrado horizontal */
+    padding: 30px; /* Espacio interno */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center; /* Centra el título */
+    color: #000000;
+    margin-bottom: 20px; /* Espacio entre el título y la foto */
+}
+
+
+.foto-container {
+    text-align: center
+    /* Centra la imagen */
+}
+
+.detalle-container {
+    margin-top: 20px; /* Espacio entre la imagen y los detalles */
+}
+
+.xdd {
+    text-align: left; /* Alinea el contenido de los detalles a la izquierda */
+}
+
+ul {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold; /* Aplica negrita al texto */
+}
+
+.foto-container img {
+    max-width: 30%; /* Ajusta el ancho máximo de la imagen al contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.nombre-container {
+    text-align: center;
+}
+
+.nombre {
+    margin: 50px auto 0; /* Margen superior de 50px */
+    font-size: 30px;
+    color: var(--bg-color-dark);
+    font-weight: bold; /* Negrita */
+}
+
+.foto-container {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el nombre y la foto */
+}

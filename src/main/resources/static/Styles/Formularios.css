@@ -1,0 +1,173 @@
+/*Iniciar Sesion*/
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px 80px;
+    /* Aumentar el espacio de relleno en los laterales */
+    border-radius: 12px;
+    box-shadow: 0px 3px 4px 3px rgba(0, 0, 0, 0.2);
+    /* Aumentar la sombra */
+}
+
+@media only screen and (max-width: 420px) {
+    .container {
+        width: 0px;
+        padding: 20px 40px;
+    }
+}
+
+/* Estilos para las etiquetas de los inputs */
+label {
+    font-weight: bold;
+}
+
+/* Estilos para los inputs */
+input[type="emails"],
+input[type="passwords"] {
+    width: 390px;
+    /* Establecer el ancho en píxeles */
+    height: 40px;
+    /* Establecer la altura en píxeles */
+    padding: 8px;
+    /* Reducción del espacio interno */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de enviar */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--tertiary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--tertiary-color);
+}
+
+/*.login-success-message {
+    font-size: 20px;
+    font-weight: 700;
+    color: #006241;
+    margin-top: 20px;
+    text-align: center;
+}*/
+
+
+/*Registro*/
+
+.section-registro {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.Contenido {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titulossss {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.cuentas {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.215em;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.58);
+}
+
+/*.cuentas2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.215em;
+    text-align: center;
+    color: #006241;
+}*/
+
+.Registro-formulario {
+    max-width: 1000px;
+    /* Ajustar el máximo ancho del formulario */
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px 80px;
+    /* Aumentar el espacio de relleno en los laterales */
+    border-radius: 12px;
+    box-shadow: 0px 3px 4px 3px rgba(0, 0, 0, 0.2);
+    /* Aumentar la sombra */
+}
+
+h2,
+h3 {
+    margin-top: 0;
+    font-weight: 800;
+    font-size: 150%;
+    /* Ajustar el tamaño de fuente */
+}
+
+.form-section {
+    margin-bottom: 10%;
+    /* Ajustar el margen inferior */
+}
+
+.form-section h3 {
+    margin-bottom: 5%;
+    /* Ajustar el margen inferior */
+    font-size: 125%;
+    /* Ajustar el tamaño de fuente */
+}
+
+.form-group {
+    margin-bottom: 5%;
+    /* Ajustar el margen inferior */
+}
+
+label {
+    display: block;
+    margin-bottom: 2%;
+    /* Ajustar el margen inferior */
+    font-size: 110%;
+    /* Ajustar el tamaño de fuente */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    /* Establecer el ancho en píxeles */
+    height: 50px;
+    /* Establecer la altura en píxeles */
+    padding: 10px;
+    /* Ajustar el espacio interno */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    /* Tamaño de fuente en píxeles */
+}
+
