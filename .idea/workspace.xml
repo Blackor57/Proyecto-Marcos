@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d90bc266-076c-452f-8a44-5b7cdc9617fc" name="Changes" comment="holi">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/ALIMENTOS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/MERCH.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Ordenes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/PACKS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Perfil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Perzonaliza.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Reclamaciones.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Reward.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/bebidas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/carrito.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/categorias.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/comprar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Blackor57"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Blackor57/Proyecto-Marcos.git",
+    "accountId": "4ab2ba45-8c19-4d01-80f8-7135836421d6"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2nA1mlE0ztiNmkC2ZkQni2H2QXA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jhoel/IdeaProjects/Proyecto-Marcos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jhoel\IdeaProjects\Proyecto-Marcos\src\main\resources\templates" />
+      <recent name="C:\Users\jhoel\IdeaProjects\Proyecto-Marcos\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProyectoMarcosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Proyecto-Marcos" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.proyectomarcos.ProyectoMarcosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d90bc266-076c-452f-8a44-5b7cdc9617fc" name="Changes" comment="" />
+      <created>1728401229221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728401229221</updated>
+      <workItem from="1728401230743" duration="529000" />
+    </task>
+    <task id="LOCAL-00001" summary="holi">
+      <option name="closed" value="true" />
+      <created>1728401634899</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728401634899</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="holi" />
+    <option name="LAST_COMMIT_MESSAGE" value="holi" />
+  </component>
+</project>
