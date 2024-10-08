@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th ="https://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" th:href="@{/Styles/Styles.css}"/>
+    <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
+    <link rel="stylesheet" th:href="@{/Styles/style-carrito.css}">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Teachers:wght@500&display=swap');
+    </style>
+
+    <link rel="shortcut icon" th:href="@{../../static/img/pizza.png}" type="image/x-icon">
+    <!--Stylos-->
+    <title>Pizzeria Pizza</title>
+</head>
+
+<body>
+    <header th:replace = "layout/header :: header" ></header>
+
+    <div class="categorias">
+        <button class="categoria-btn" data-categoria="manana">BEBIDAS</button>
+        <button class="categoria-btn" data-categoria="tarde">ALIMENTOS</button>
+        <button class="categoria-btn" data-categoria="noche">MERCH Y CAFÉ EN GRANO</button>
+        <button class="categoria-btn" data-categoria="fiesta">PACKS Y BOXES</button>
+    </div>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+               
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+
+            <div class="item" data-categoria="tarde">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="tarde">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="tarde">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="tarde">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+
+            <div class="item" data-categoria="noche">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <!-- Carrito de Compras -->
+            <div class="carrito" id="carrito">
+                <div class="header-carrito">
+                    <h2>Tu Carrito</h2>
+                </div>
+
+                <div class="carrito-items">
+
+                </div>
+                <div class="carrito-total">
+                    <div class="fila">
+                        <strong>Tu Total</strong>
+                        <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                    </div>
+                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+                </div>
+            </div>
+    </section>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+
+            <div class="item" data-categoria="noche">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="noche">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="fiesta">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="fiesta">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+
+            <div class="item" data-categoria="fiesta">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <!-- Carrito de Compras -->
+            <div class="carrito" id="carrito">
+                <div class="header-carrito">
+                    <h2>Tu Carrito</h2>
+                </div>
+
+                <div class="carrito-items">
+
+                </div>
+                <div class="carrito-total">
+                    <div class="fila">
+                        <strong>Tu Total</strong>
+                        <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                    </div>
+                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+                </div>
+            </div>
+    </section>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+
+            <div class="item" data-categoria="fiesta">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+
+            <div class="item" data-categoria="manana">
+                <span class="titulo-item">Retro Frappuccino</span>
+
+                <span class="precio-item">$ 16,50</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <!-- Carrito de Compras -->
+            <div class="carrito" id="carrito">
+                <div class="header-carrito">
+                    <h2>Tu Carrito</h2>
+                </div>
+
+                <div class="carrito-items">
+
+                </div>
+                <div class="carrito-total">
+                    <div class="fila">
+                        <strong>Tu Total</strong>
+                        <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                    </div>
+                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+                </div>
+            </div>
+    </section>
+    <script th:src="@{/JavaScript/script-carrito.js}"></script>
+    <footer th:replace="layout/footer :: footer"></footer>
+</body>
+</html>
