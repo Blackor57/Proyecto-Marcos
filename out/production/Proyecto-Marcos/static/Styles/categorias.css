@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f6f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Alineación de elementos para estirar verticalmente */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.column-left {
+    flex: 35%; /* Ocupa el 35% del espacio disponible */
+    padding: 40px;
+    position: relative; /* Posición relativa para el contenedor */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    background-color: #ffffff; /* Fondo blanco para cubrir toda la columna */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-left img {
+    width: auto; /* Ancho automático para mantener la proporción */
+    max-width: 100%; /* Máximo ancho del contenedor */
+    height: 100%; /* Alto al 100% del contenedor */
+    position: absolute; /* Posición absoluta para mantener estática */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta para centrar verticalmente */
+    left: 0; /* Alineación a la izquierda */
+}
+
+.column-right {
+    flex: 65%; /* Ocupa el 65% del espacio disponible */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido es más largo */
+}
+
+.menu {
+    background-color: #efc0c0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(252, 251, 251);
+    margin-bottom: 20px;
+}
+
+.menu h2 {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+.menu h3 {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 0px solid #ff1a1a;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en una nueva línea */
+    gap: 18px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Alinea las tarjetas en el centro horizontalmente */
+    margin-bottom: 20px; /* Espacio entre los conjuntos de tarjetas */
+}
+
+.card {
+    flex: 1 0 300px; /* Hace que las tarjetas sean flexibles */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Fondo blanco */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Altura fija para la imagen superior */
+    object-fit: cover; /* Ajusta para mantener la proporción y recortar la imagen si es necesario */
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+.card-text {
+    color: #9a3939; /* Color de texto gris oscuro */
+}
+.card-title {
+    color: #780707; /* Color de texto gris oscuro */
+}
+.card-footer {
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 0 0 10px 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #ec0909;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #850d0d;
+}
+
+h5 {
+    color: rgb(0, 91, 228);
+}
+
+/*Estilos producto
+*/
+.menu1 {
+    background-color: #ddebdf;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(252, 251, 251);
+    margin-bottom: 20px;
+}
+.menu1 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+.menu1 h3 {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 0px solid #950707;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas flexibles con un mínimo de 300px */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+}
+
+.product-image {
+    flex: 40%;
+    overflow: hidden;
+    border-radius: 8px 0 0 8px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-details {
+    flex: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #a65252;
+    margin-bottom: 10px;
+}
+
+.product-actions {
+    margin-top: auto;
+}
+
+.btnA {
+    padding: 10px 20px;
+    background-color: #9a3939;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnA:hover {
+    background-color: #a65252;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr); /* Una columna en dispositivos pequeños */
+    }
+}

@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d90bc266-076c-452f-8a44-5b7cdc9617fc" name="Changes" comment="cambio">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/ProyectoMarcosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/ProyectoMarcosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +21,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="devf" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -54,12 +64,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;Spring Boot.ProyectoMarcosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;devf&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jhoel/IdeaProjects/Proyecto-Marcos&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/FABRIZIO/Downloads/Proyecto-Marcos-master/Proyecto-Marcos-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,8 +103,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
       </set>
     </attachedChunks>
   </component>
@@ -104,6 +119,22 @@
       <workItem from="1728401230743" duration="1496000" />
       <workItem from="1728415611070" duration="2000" />
       <workItem from="1728415637000" duration="95000" />
+      <workItem from="1728604982936" duration="3541000" />
+      <workItem from="1728626309131" duration="442000" />
+      <workItem from="1728626924167" duration="4000" />
+      <workItem from="1728626949248" duration="175000" />
+      <workItem from="1728627137428" duration="19000" />
+      <workItem from="1728969904075" duration="32000" />
+      <workItem from="1729206622097" duration="4184000" />
+      <workItem from="1729213672977" duration="1195000" />
+      <workItem from="1729215959570" duration="1539000" />
+      <workItem from="1729219352917" duration="1597000" />
+      <workItem from="1729220982839" duration="182000" />
+      <workItem from="1729221187555" duration="1593000" />
+      <workItem from="1729222812459" duration="153000" />
+      <workItem from="1729222977959" duration="2173000" />
+      <workItem from="1729275136930" duration="1222000" />
+      <workItem from="1729278772984" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="holi">
       <option name="closed" value="true" />

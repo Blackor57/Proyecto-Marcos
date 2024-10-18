@@ -1,0 +1,125 @@
+html {
+    font-size: 62.5%;
+}
+
+main {
+    width: 100%;
+    background-color: #e8e8e8;
+    padding-bottom: 5rem;
+}
+
+main > div {
+    width: 100%;
+}
+
+/* Seccion Botones para eleccion */
+
+.chooser__container {
+    padding: 4rem 0 4rem;
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.chooser__container button {
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.chooser__container button:hover {
+    background-color: var(--bg-strong-red) !important;
+    color: #fff !important;
+}
+
+.chooser__container p {
+    padding: 1rem;
+    font-size: 2.2rem;
+}
+
+#button1-chooser {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+
+/* Estilos para formulario login */
+
+
+.logo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo__container p{
+    font-size: 2.6rem;
+    font-family: "Teachers", sans-serif;
+    margin: 0;
+}
+
+.letras {
+    font-family: "Teachers", sans-serif;;
+    font-size: 1.8rem;
+}
+
+.login__container > p,
+.register__container > p{
+    font-family: "Teachers", sans-serif;;
+    font-size: 1.8rem;
+}
+
+.login__container form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input__div {
+    font-size: 1.8rem;
+}
+.input__div input {
+    padding: 1rem;
+    border: 1px solid rgb(170, 161, 161);
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.submit__div input{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Estilos para formulario registro */
+
+
+
+.register__container form {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.form__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.form__section h3 {
+    font-weight: bold;
+}
+
+.form__group {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.form__group :nth-child(1){
+    width: 30%;
+}
