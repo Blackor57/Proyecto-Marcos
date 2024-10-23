@@ -18,10 +18,20 @@ public class Usuario {
 
     @Column(name = "apellido")
     private String apellido;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "phone")
     private String phone;
+
+    @Column(name = "dni")
     private String dni;
+
+    @Column(name = "birth_date")
     private String birthDate;
 
     @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)

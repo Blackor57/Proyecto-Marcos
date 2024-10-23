@@ -1,6 +1,7 @@
 package com.example.proyectomarcos.controller;
 
-import com.example.proyectomarcos.dto.UsuarioRegistroDTO;
+//import com.example.proyectomarcos.dto.UsuarioRegistroDTO;
+import com.example.proyectomarcos.entity.Usuario;
 import com.example.proyectomarcos.services.UsuarioServicio;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,20 +19,25 @@ public class RegistroUsuarioControlador {
         this.usuarioServicio = usuarioServicio;
     }
 
-    @ModelAttribute("usuario")
-    public UsuarioRegistroDTO retornarNuevoUsuarioRegistroDTO() {
-        return new UsuarioRegistroDTO();
-    }
+//    @ModelAttribute("usuario")
+//    public UsuarioRegistroDTO retornarNuevoUsuarioRegistroDTO() {
+//        return new UsuarioRegistroDTO();
+//    }
 
     @GetMapping
     public String mostrarFormularioRegistro() {
         return "registro";
     }
 
+//    @PostMapping
+//    public String registrarCuentaDeUsuario(@ModelAttribute("usuario") UsuarioRegistroDTO registroDTO) {
+//        usuarioServicio.save(registroDTO);
+//        return "redirect:/registro?good";
+//    }
+
     @PostMapping
-    public String registrarCuentaDeUsuario(@ModelAttribute("usuario") UsuarioRegistroDTO registroDTO) {
-        System.out.println("Formulario enviado correctamente.");
+    public String registrarCuentaDeUsuario(@ModelAttribute("usuario") Usuario registroDTO) {
         usuarioServicio.save(registroDTO);
-        return "redirect:/registro?exito";
+        return "redirect:/registro?good";
     }
 }

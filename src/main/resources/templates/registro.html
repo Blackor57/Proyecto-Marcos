@@ -39,19 +39,23 @@
                 <img src="/img/pizza.png" alt="" width="60">
                 <p>Pizzeria Rewards</p>
             </div>
+            <div th:if="${param.error}">
+                <div class="alert alert-danger">Usuario o contraeña erroneos</div>
+            </div>
+
             <p>Ingresa a tu cuenta Pizzeria Rewards para ganar Estrellas con tus compras y canjearlas por tus productos favoritos</p>
 
             <form th:action="@{/login}" method="post">
                 <div class="input__div">
                     <label for="emails">Correo electrónico:</label>
                     <div class="respuestas">
-                        <input id="emails" type="email" required placeholder="example@mail.com">
+                        <input id="emails" type="email" name="username" required placeholder="example@mail.com">
                     </div>
                 </div>
                 <div class="input__div">
                     <label for="passwords">Contraseña:</label>
                     <div class="respuestas">
-                        <input id="passwords" type="password" required placeholder="*******">
+                        <input id="passwords" type="password" name="password" required placeholder="*******">
                     </div>
                 </div>
                 <div class="submit__div">
@@ -69,9 +73,9 @@
                 <p>Pizzeria Rewards</p>
             </div>
             <p>Registrate para pertenecer a la familia Pizzera y obtener Rewards por cada compra</p>
-            <div th:if="${param.exito}">
-                <div class="alert alert-info">Se ha registrado Correctamente</div>
-            </div>
+<!--            <div th:if="${param.exito}">-->
+<!--                <div class="alert alert-info">Se ha registrado Correctamente</div>-->
+<!--            </div>-->
             <form th:action="@{/registro}" th:object="${usuario}" method="post">
                 <div class="form__section">
                     <h3><i>Información Personal</i></h3>

@@ -4,21 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d90bc266-076c-452f-8a44-5b7cdc9617fc" name="Changes" comment="FrontController agregado">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/RegistroUsuarioControlador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/dto/UsuarioRegistroDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/entity/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/entity/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/repository/UsuarioRepositorio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicioImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="d90bc266-076c-452f-8a44-5b7cdc9617fc" name="Changes" comment="Al fin funciona el login carajo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/config/EncoderConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/security/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/RegistroUsuarioControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/RegistroUsuarioControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/dto/UsuarioRegistroDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/dto/UsuarioRegistroDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/repository/UsuarioRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/repository/UsuarioRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registro.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +140,7 @@
       <workItem from="1729553891038" duration="9772000" />
       <workItem from="1729611888956" duration="3062000" />
       <workItem from="1729658915262" duration="42000" />
-      <workItem from="1729697687795" duration="4684000" />
+      <workItem from="1729697687795" duration="24117000" />
     </task>
     <task id="LOCAL-00001" summary="holi">
       <option name="closed" value="true" />
@@ -177,16 +174,36 @@
       <option name="project" value="LOCAL" />
       <updated>1728416769188</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Al fin funciona el login carajo">
+      <option name="closed" value="true" />
+      <created>1729703014105</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729703014105</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="holi" />
     <MESSAGE value="cambio 1" />
     <MESSAGE value="FrontController agregado" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrontController agregado" />
+    <MESSAGE value="Al fin funciona el login carajo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Al fin funciona el login carajo" />
   </component>
 </project>
