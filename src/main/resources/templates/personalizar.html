@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="seccion-tamano">
+        <h2>Selecciona el tamaño</h2>
+        <select onchange="actualizarFormularioOculto('pizza.tamano', this.value)">
+            <option value="mediana">Mediana</option>
+            <option value="grande">Grande</option>
+            <option value="familiar">Familiar</option>
+            <option value="gigante">Gigante</option>
+        </select>
+    </div>
+
+    <!-- Sección para seleccionar masa -->
+    <div id="seccion-masa">
+        <h2>Selecciona la masa</h2>
+        <select onchange="actualizarFormularioOculto('pizza.masa', this.value)">
+            <option value="tradicional">Tradicional</option>
+            <option value="italiana">Italiana</option>
+            <option value="queso">Queso</option>
+            <option value="pizza">Pizza</option>
+        </select>
+    </div>
+
+    <!-- Sección para seleccionar queso -->
+    <div id="seccion-queso">
+        <h2>Selecciona la cantidad de queso</h2>
+        <select onchange="actualizarFormularioOculto('pizza.queso', this.value)">
+            <option value="normal">Normal</option>
+            <option value="poco">Poco</option>
+            <option value="extra">Extra</option>
+        </select>
+    </div>
+
+    <!-- Sección para seleccionar salsa -->
+    <div id="seccion-salsa">
+        <h2>Selecciona la salsa</h2>
+        <select onchange="actualizarFormularioOculto('pizza.salsa', this.value)">
+            <option value="natural">Natural</option>
+            <option value="bbq">BBQ</option>
+            <option value="buffalo">Buffalo</option>
+        </select>
+    </div>
+
+    <!-- Sección para seleccionar carnes (Checkboxes) -->
+    <div id="seccion-carnes">
+        <h2>Selecciona las carnes</h2>
+        <input type="checkbox" value="molida" onchange="actualizarCheckbox('carnes', this.value, this.checked)"> Molida
+        <input type="checkbox" value="pollo" onchange="actualizarCheckbox('carnes', this.value, this.checked)"> Pollo
+        <input type="checkbox" value="jamon" onchange="actualizarCheckbox('carnes', this.value, this.checked)"> Jamón
+        <input type="checkbox" value="tocino" onchange="actualizarCheckbox('carnes', this.value, this.checked)"> Tocino
+        <input type="checkbox" value="pepperoni" onchange="actualizarCheckbox('carnes', this.value, this.checked)"> Pepperoni
+        <input type="checkbox" value="italiana" onchange="actualizarCheckbox('carnes', this.value, this.checked)"> Salchicha Italiana
+    </div>
+
+    <!-- Sección para seleccionar ingredientes (Checkboxes) -->
+    <div id="seccion-ingredientes">
+        <h2>Selecciona los ingredientes</h2>
+        <input type="checkbox" value="cheddar" onchange="actualizarCheckbox('ingredientes', this.value, this.checked)"> Cheddar
+        <input type="checkbox" value="pimiento" onchange="actualizarCheckbox('ingredientes', this.value, this.checked)"> Pimiento
+        <input type="checkbox" value="champinon" onchange="actualizarCheckbox('ingredientes', this.value, this.checked)"> Champiñón
+        <input type="checkbox" value="pina" onchange="actualizarCheckbox('ingredientes', this.value, this.checked)"> Piña
+        <input type="checkbox" value="cebolla" onchange="actualizarCheckbox('ingredientes', this.value, this.checked)"> Cebolla
+        <input type="checkbox" value="aceituna" onchange="actualizarCheckbox('ingredientes', this.value, this.checked)"> Aceituna
+    </div>
+
+    <!-- Botón para enviar la pizza personalizada -->
+    <div>
+        <button type="button" onclick="enviarFormulario()">Enviar Pizza</button>
+    </div>
+
+    <!-- Formulario oculto -->
+    <form id="formularioPizza" action="/procesarPizza" method="post" style="display:none;">
+        <input type="hidden" id="pizza.tamano" name="pizza.tamano" value="">
+        <input type="hidden" id="pizza.masa" name="pizza.masa" value="">
+        <input type="hidden" id="pizza.queso" name="pizza.queso" value="">
+        <input type="hidden" id="pizza.salsa" name="pizza.salsa" value="">
+
+        <!-- Inputs ocultos para carnes e ingredientes -->
+        <input type="hidden" id="carnes" name="carnes" value="">
+        <input type="hidden" id="ingredientes" name="ingredientes" value="">
+    </form>
+
+</body>
+</html>

@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d90bc266-076c-452f-8a44-5b7cdc9617fc" name="Changes" comment="cambio">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Marcos/application.properties.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Marcos/com/example/proyectomarcos/ProyectoMarcosApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto-Marcos/com/example/proyectomarcos/ProyectoMarcosApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Marcos/com/example/proyectomarcos/service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto-Marcos/com/example/proyectomarcos/service/UsuarioService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/ProyectoMarcosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/ProyectoMarcosApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +81,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -134,7 +136,20 @@
       <workItem from="1729222812459" duration="153000" />
       <workItem from="1729222977959" duration="2173000" />
       <workItem from="1729275136930" duration="1222000" />
-      <workItem from="1729278772984" duration="695000" />
+      <workItem from="1729278772984" duration="1061000" />
+      <workItem from="1729455864982" duration="12000" />
+      <workItem from="1729724324135" duration="2105000" />
+      <workItem from="1729726908929" duration="2503000" />
+      <workItem from="1729729473226" duration="44000" />
+      <workItem from="1729729524756" duration="27000" />
+      <workItem from="1729729574757" duration="270000" />
+      <workItem from="1729729871750" duration="75000" />
+      <workItem from="1729729962544" duration="30000" />
+      <workItem from="1729730010297" duration="166000" />
+      <workItem from="1729731611451" duration="214000" />
+      <workItem from="1729731835479" duration="2357000" />
+      <workItem from="1729734349948" duration="4925000" />
+      <workItem from="1729747291660" duration="42000" />
     </task>
     <task id="LOCAL-00001" summary="holi">
       <option name="closed" value="true" />
