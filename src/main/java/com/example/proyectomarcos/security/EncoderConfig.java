@@ -1,4 +1,4 @@
-package com.example.proyectomarcos.config;
+package com.example.proyectomarcos.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

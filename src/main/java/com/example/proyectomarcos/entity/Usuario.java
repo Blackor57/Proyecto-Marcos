@@ -3,6 +3,7 @@ package com.example.proyectomarcos.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Collection;
 
 @Entity
@@ -32,7 +33,7 @@ public class Usuario {
     private String dni;
 
     @Column(name = "birth_date")
-    private String birthDate;
+    private LocalDate birthDate;
 
     @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinTable(name = "usuarios_roles",
@@ -96,11 +97,11 @@ public class Usuario {
         this.dni = dni;
     }
 
-    public String getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -112,7 +113,7 @@ public class Usuario {
         this.roles = roles;
     }
 
-    public Usuario(long id, String nombre, String apellido, String email, String password, String phone, String dni, String birthDate, Collection<Rol> roles) {
+    public Usuario(long id, String nombre, String apellido, String email, String password, String phone, String dni, LocalDate birthDate, Collection<Rol> roles) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -124,7 +125,7 @@ public class Usuario {
         this.roles = roles;
     }
 
-    public Usuario(String nombre, String apellido, String email, String password, String phone, String dni, String birthDate, Collection<Rol> roles) {
+    public Usuario(String nombre, String apellido, String email, String password, String phone, String dni, LocalDate birthDate, Collection<Rol> roles) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
