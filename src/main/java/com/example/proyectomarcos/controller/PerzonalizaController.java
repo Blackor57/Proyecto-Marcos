@@ -34,7 +34,7 @@ public class PerzonalizaController {
         model.addAttribute("pizza", new Pizza()); // O el objeto que corresponda
         model.addAttribute("carnes", new Carne()); // O el objeto que corresponda
         model.addAttribute("ingredientes", new Ingrediente()); // O el objeto que corresponda
-        return "personalizar";
+        return "personaliza";
     }
 
     @PostMapping("/agregarPersonalizada")

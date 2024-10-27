@@ -31,6 +31,11 @@ public class FrontController {
         return "Reward";
     }
 
+    @GetMapping("/personalizar")
+    public String personalizar() {
+        return "personaliza";
+    }
+
     @GetMapping("/perfil")
     public String perfil() {
         return "Perfil";
