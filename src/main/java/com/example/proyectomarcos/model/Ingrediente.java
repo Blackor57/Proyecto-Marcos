@@ -2,6 +2,7 @@ package com.example.proyectomarcos.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Data
@@ -12,21 +13,27 @@ public class Ingrediente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "cebolla", updatable = false)
-    private Boolean cebolla;
+    @Column(name = "cebolla", updatable = false, length = 1, nullable = false)
+    @ColumnDefault("0")
+    private String cebolla;
 
-    @Column(name = "champinon", updatable = false)
-    private Boolean champinon;
+    @Column(name = "champinon", updatable = false, length = 1, nullable = false)
+    @ColumnDefault("0")
+    private String champinon;
 
-    @Column(name = "aceituna", updatable = false)
-    private Boolean aceituna;
+    @Column(name = "aceituna", updatable = false, length = 1, nullable = false)
+    @ColumnDefault("0")
+    private String aceituna;
 
-    @Column(name = "pimiento", updatable = false)
-    private Boolean pimiento;
+    @Column(name = "pimiento", updatable = false, length = 1, nullable = false)
+    @ColumnDefault("0")
+    private String pimiento;
 
-    @Column(name = "pina", updatable = false)
-    private Boolean pina;
+    @Column(name = "pina", updatable = false, length = 1, nullable = false)
+    @ColumnDefault("0")
+    private String pina;
 
-    @Column(name = "cheddar", updatable = false)
-    private Boolean cheddar;
+    @Column(name = "cheddar", updatable = false, length = 1, nullable = false)
+    @ColumnDefault("0")
+    private String cheddar;
 }

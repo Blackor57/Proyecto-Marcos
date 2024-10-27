@@ -1,0 +1,196 @@
+body {
+    font-family: 'Playfair Display', serif; /* Cambia 'Lora' por la fuente que elijas */
+    min-height: 120vh; /* Asegura que el body tenga al menos la altura de la ventana */
+    margin: 0; /* Elimina márgenes predeterminados del body */
+    padding-bottom: 50px; /* Espacio adicional en la parte inferior para el botón */
+}
+.fondo-color {
+
+    background-color: #141417; /* Cambia este color según tu preferencia
+}
+.fondo-imagenes {
+    position: relative; /* Permite posicionar elementos hijos */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
+.titulo {
+    position: absolute; /* Permite superponer el título */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
+    color: hsl(37, 50%, 76%); /* Color del texto del título */
+    text-align: center; /* Centra el texto */
+    z-index: 10; /* Asegura que el título esté por encima de las imágenes */
+    margin-top: 50px; /* Espacio con el techo de la página */
+    font-size: 42px; /* Cambia este valor para ajustar el tamaño */
+    border-bottom: 1px solid hsl(37, 50%, 76%); /* Línea debajo del título */
+    padding-bottom: 10px; /* Espacio entre el texto y la línea */
+}
+.imagen-1 {
+    width: 750px; /* Ajusta el tamaño según lo necesites */
+    height: 650px; /* Mantiene la proporción de la imagen */
+}
+.imagen-2 {
+    width: 550px; /* Ajusta el tamaño según lo necesites */
+    height: 400px; /* Mantiene la proporción de la imagen */
+    float: right; /* Alinea la imagen a la derecha */
+    margin-top: 300px; /* Espacio con el techo de la página */
+}
+/* Animación para las imágenes */
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.imagen-1, .imagen-2 {
+    animation: movimiento 6.5s ease-in-out infinite;
+}
+
+
+.texto {
+    position: absolute; /* Permite superponer el título */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
+    color: rgb(204, 204, 204); /* Color del texto del título */
+    text-align: center; /* Centra el texto */
+    z-index: 10; /* Asegura que el título esté por encima de las imágenes */
+    margin-top: 120px; /* Espacio con el techo de la página */
+    font-size: 18px; /* Cambia este valor para ajustar el tamaño */
+    width: 1000px; /* Cambia este valor para ajustar el ancho */
+}
+.imagen-pizza {
+    display: block; /* Hace que la imagen se comporte como un bloque */
+    position: absolute; /* Posiciona la imagen en relación a su contenedor */
+    z-index: 10; /* Asegura que esté sobre las otras imágenes */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
+    align-items: center; /* Centra verticalmente */
+    top: 60%; /* Centra verticalmente */
+}
+
+.contenedor-principal {
+    border: 1px solid hsl(38, 61%, 73%); /* Borde alrededor del contenedor principal */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo blanco con opacidad */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    width: fit-content;
+    float: left;
+    position: absolute; /* Permite superponer el título */
+    z-index: 10; /* Asegura que el título esté por encima de las imágenes */
+    top: 30%; /* Centra verticalmente */
+    left: 7%; /* Centra horizontalmente */
+
+}
+
+
+.queso {
+    position: absolute; /* Permite superponer sobre la pizza */
+    top: 60%; /* Ajustar según sea necesario */
+    left: 245%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Asegura que esté centrado */
+    width: auto; /* Mantiene proporciones */
+    height: auto; /* Mantiene proporciones */
+    z-index: 20; /* Asegura que esté encima */
+    display: none; /* Inicialmente oculto */
+}
+
+select {
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    height: 30px; /* Ajusta la altura según sea necesario */
+    font-size: 16px; /* Asegúrate de que el texto sea legible */
+}
+
+
+.contenedor-secundario {
+    border: 1px solid hsl(38, 61%, 73%); /* Borde alrededor del contenedor secundario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo blanco con opacidad */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    width: fit-content;
+    float: right; /* Alinea el contenedor a la derecha */
+    position: absolute; /* Permite superponer el título */
+    z-index: 10; /* Asegura que el título esté por encima de las imágenes */
+    top: 30%; /* Centra verticalmente */
+    left: calc(100% - 7% - /* ancho del contenedor secundario */ 350px); /* Ajusta según el ancho deseado */
+}
+h2 {
+    color: #ffffff; /* Color rosa */
+    font-size: 24px; /* Tamaño del texto */
+}
+
+select {
+    background-color: #000000; /* Color de fondo */
+    color: #ffffff; /* Color del texto en el combo box */
+    font-size: 16px; /* Tamaño del texto en el combo box */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #878481; /* Borde inicial */
+}
+
+/* Cambiar el borde a dorado cuando el select está enfocado */
+select:focus {
+    border: 2px solid hsl(38, 56%, 74%); /* Borde dorado */
+    outline: none; /* Eliminar el contorno predeterminado del navegador */
+}
+option{
+    color: #ffffff;
+}
+label{
+    color: white;
+}
+
+
+.ingrediente-imagen {
+    position: absolute; /* Permite superponer sobre la pizza */
+    display: none; /* Inicialmente oculto */
+    z-index: 20; /* Asegura que esté encima de la pizza */
+    width: auto; /* Mantiene proporciones */
+    height: auto; /* Mantiene proporciones */
+    transform: translate(-50%, -50%); /* Asegura que esté centrado */
+}
+
+
+/* Ajusta las posiciones según sea necesario */
+#molida-imagen { top: 210px; left: -300px; }
+#pollo-imagen { top: 200px; left: -320px; }
+#jamon-imagen { top: 220px; left: -300px; }
+#tocino-imagen { top: 220px; left: -310px; }
+#pepperoni-imagen { top: 220px; left: -310px; }
+#italiana-imagen { top: 220px; left: -310px; }
+#cheddar-imagen { top: 220px; left: -300px; }
+#pimiento-imagen {top: 220px; left: -300px; }
+#champinon-imagen { top: 220px; left: -300px; }
+#pina-imagen {top: 220px; left: -300px; }
+#cebolla-imagen { top: 220px; left: -300px; }
+#aceituna-imagen { top: 220px; left: -300px; }
+
+
+
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton-enviar {
+    background-color: hsl(37, 50%, 76%); /* Color de fondo */
+    color: #ffffff; /* Texto blanco */
+    font-size: 18px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde predeterminado */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para cambios de color */
+
+    border-bottom: 3px solid hsl(37, 70%, 66%); /* Borde inferior */
+
+    margin-left: 550px; /* Mueve el botón hacia la derecha */
+}
+
+.boton-enviar:hover {
+    background-color: hsl(37, 70%, 66%); /* Color más claro al pasar el mouse */
+}

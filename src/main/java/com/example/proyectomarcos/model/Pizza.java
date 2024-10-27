@@ -15,8 +15,11 @@ public class Pizza {
     @Column(name = "tamano", nullable = false, length = 20)
     private String tamano;
 
+    @Column(name = "masa", nullable = false, length = 20)
+    private String masa;
+
     @Column(name = "queso_cantidad", nullable = false, length = 20)
-    private String quesoCant;
+    private String queso;
 
     @Column(name = "salsa", nullable = false, length = 20)
     private String salsa;
