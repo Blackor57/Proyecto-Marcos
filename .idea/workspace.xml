@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d90bc266-076c-452f-8a44-5b7cdc9617fc" name="Changes" comment="Al fin funciona el login carajo">
+    <list default="true" id="d90bc266-076c-452f-8a44-5b7cdc9617fc" name="Changes" comment="Ya funciona todos los registros, ahora solo voy a pasar el crud y lo demas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/RegistroUsuarioControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/controller/RegistroUsuarioControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Perfil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/proyectomarcos/services/UsuarioServicioImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +136,12 @@
       <workItem from="1729658915262" duration="42000" />
       <workItem from="1729697687795" duration="24117000" />
       <workItem from="1729733189844" duration="1549000" />
-      <workItem from="1729783658904" duration="8849000" />
+      <workItem from="1729783658904" duration="16259000" />
+      <workItem from="1729956207019" duration="10430000" />
+      <workItem from="1729972881768" duration="387000" />
+      <workItem from="1729973294442" duration="19000" />
+      <workItem from="1729973785167" duration="142000" />
+      <workItem from="1729974011107" duration="206000" />
     </task>
     <task id="LOCAL-00001" summary="holi">
       <option name="closed" value="true" />
@@ -186,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729787590692</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ya funciona todos los registros, ahora solo voy a pasar el crud y lo demas">
+      <option name="closed" value="true" />
+      <created>1729792926373</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729792926373</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +221,7 @@
     <MESSAGE value="cambio 1" />
     <MESSAGE value="FrontController agregado" />
     <MESSAGE value="Al fin funciona el login carajo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Al fin funciona el login carajo" />
+    <MESSAGE value="Ya funciona todos los registros, ahora solo voy a pasar el crud y lo demas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya funciona todos los registros, ahora solo voy a pasar el crud y lo demas" />
   </component>
 </project>

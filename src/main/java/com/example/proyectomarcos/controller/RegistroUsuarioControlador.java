@@ -30,7 +30,6 @@ public class RegistroUsuarioControlador {
 
     @PostMapping
     public String registrarCuentaDeUsuario(@ModelAttribute("usuario") UsuarioRegistroDTO registroDTO) {
-        System.out.println("Datos recibidos: " + registroDTO);
         usuarioServicio.save(registroDTO);
         return "redirect:/registro?good";
     }

@@ -38,12 +38,11 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/about","/order",
-                                "/Perzone","/reclamation",
-                                "/rewards","/perfil",
-                                "/comprar", "/registro/**",
-                                "/index/**", "/JavaScript/**",
+                        .requestMatchers("/", "/index", "/about", "/order",
+                                "/Perzone", "/reclamation", "/rewards",
+                                "/comprar", "/registro/**", "/JavaScript/**",
                                 "/Styles/**", "/img/**").permitAll()
+                        .requestMatchers("/perfil").authenticated()
                         .anyRequest().authenticated()
                 )
                 .formLogin(formLogin -> formLogin
@@ -57,6 +56,9 @@ public class SecurityConfiguration {
                         .invalidateHttpSession(true)
                         .clearAuthentication(true)
                         .permitAll()
+                )
+                .exceptionHandling(exceptionHandling -> exceptionHandling
+                        .authenticationEntryPoint((request, response, authException) -> response.sendRedirect("/index"))
                 );
         return http.build();
     }

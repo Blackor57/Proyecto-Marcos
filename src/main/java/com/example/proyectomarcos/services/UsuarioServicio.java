@@ -7,5 +7,4 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 public interface UsuarioServicio extends UserDetailsService {
     public Usuario save(UsuarioRegistroDTO registroDTO);
 
-
 }

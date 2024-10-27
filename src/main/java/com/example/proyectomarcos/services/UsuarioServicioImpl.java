@@ -29,7 +29,7 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 
     @Override
     public Usuario save(UsuarioRegistroDTO registroDTO) {
-        Usuario usuario = new Usuario(registroDTO.getNombre(), registroDTO.getApellido(),
+                Usuario usuario = new Usuario(registroDTO.getNombre(), registroDTO.getApellido(),
                 registroDTO.getEmail(), passwordEncoder.encode(registroDTO.getPassword()),
                 registroDTO.getPhone(),
                 registroDTO.getDni(),
