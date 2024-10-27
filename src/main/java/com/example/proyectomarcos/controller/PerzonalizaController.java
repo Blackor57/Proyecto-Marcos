@@ -30,7 +30,7 @@ public class PerzonalizaController {
     private PizzaService pizzaService;
 
     @GetMapping("")
-    public String personaliza(Model model) {
+    public String personalize(Model model) {
         model.addAttribute("pizza", new Pizza()); // O el objeto que corresponda
         model.addAttribute("carnes", new Carne()); // O el objeto que corresponda
         model.addAttribute("ingredientes", new Ingrediente()); // O el objeto que corresponda
