@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class FrontController {
 
-    @GetMapping("/home")
-    public String home() {
+    @GetMapping("/index")
+    public String index() {
         return "index";
     }
-
 
     @GetMapping("/about")
     public String about() {
@@ -20,11 +19,6 @@ public class FrontController {
     @GetMapping("/order")
     public String order() {
         return "Ordenes";
-    }
-
-    @GetMapping("/Perzone")
-    public String Perzone() {
-        return "Perzonaliza";
     }
 
     @GetMapping("/reclamation")
