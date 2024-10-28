@@ -11,6 +11,8 @@ public class FrontController {
         return "index";
     }
 
+
+
     @GetMapping("/order")
     public String order() {
         return "Ordenes";
@@ -31,8 +33,9 @@ public class FrontController {
         return "personaliza";
     }
 
-    @GetMapping("/comprar")
-    public String comprar() {
-        return "carrito";
+    @GetMapping("/perfil")
+    public String perfil() {
+        return "Perfil";
     }
+
 }
