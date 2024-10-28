@@ -22,7 +22,7 @@ public class CarneService {
         return ICarne.findById(id);
     }
 
-    public void setCarne(Carne carne) {
+    public void saveCarne(Carne carne) {
         ICarne.save(carne);
     }
 

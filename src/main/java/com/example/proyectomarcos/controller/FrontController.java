@@ -38,8 +38,4 @@ public class FrontController {
         return "Perfil";
     }
 
-    @GetMapping("/comprar")
-    public String comprar() {
-        return "carrito";
-    }
 }
