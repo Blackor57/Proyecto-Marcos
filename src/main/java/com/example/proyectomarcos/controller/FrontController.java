@@ -11,10 +11,7 @@ public class FrontController {
         return "index";
     }
 
-    @GetMapping("/about")
-    public String about() {
-        return "categorias";
-    }
+
 
     @GetMapping("/order")
     public String order() {

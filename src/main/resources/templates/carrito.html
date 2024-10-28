@@ -4,75 +4,532 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" th:href="@{/Styles/Styles.css}"/>
-    <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
-    <link rel="stylesheet" th:href="@{/Styles/style-carrito.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css}"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Estilos locales -->
+    <link rel="stylesheet" th:href="@{Styles/style-carrito.css}">
+    <link rel="stylesheet" th:href="@{/Styles/Styles.css}" />
+    <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Teachers:wght@500&display=swap');
-    </style>
-
-    <link rel="shortcut icon" th:href="@{../../static/img/pizza.png}" type="image/x-icon">
-    <!--Stylos-->
+    <!-- Script local -->
+    <script th:src="@{JavaScript/script-carrito.js}" async></script>
     <title>Pizzeria Pizza</title>
 </head>
 
 <body>
     <header th:replace = "layout/header :: header" ></header>
 
+    <div class="banner">
+        <h1>“¡Es hora de satisfacer tu antojo! Elige tus favoritos.”</h1>
+    </div>
     <div class="categorias">
-        <button class="categoria-btn" data-categoria="manana">BEBIDAS</button>
-        <button class="categoria-btn" data-categoria="tarde">ALIMENTOS</button>
-        <button class="categoria-btn" data-categoria="noche">MERCH Y CAFÉ EN GRANO</button>
-        <button class="categoria-btn" data-categoria="fiesta">PACKS Y BOXES</button>
+
+        <a th:href="@{/personaliza}"><button class="categoria-btn" data-categoria="personalizada">Personalizar Pizza</button></a>
+        <button class="categoria-btn" data-categoria="pizza">PIZZAS</button>
+        <button class="categoria-btn" data-categoria="bebida">BEBIDAS</button>
+        <button class="categoria-btn" data-categoria="vino">VINOS</button>
+        <button class="categoria-btn" data-categoria="coctel">CÓCTELES</button>
+        <button class="categoria-btn" data-categoria="postre">POSTRES</button>
+        <button class="categoria-btn" data-categoria="utensilio">UTENSILIOS</button>
+
     </div>
     <section class="contenedor">
         <!-- Contenedor de elementos -->
         <div class="contenedor-items">
-            
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
+            <!--/////////////////////////////////////////////////////////////////
+            ////////////////////////BEBIDA///////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////-->
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Chicha Morada</span>
+                <img src="https://i.pinimg.com/564x/33/58/f2/3358f246baa9a431107f6136b51cf7d6.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 8,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
             </div>
 
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Inca Kola</span>
+                <img src="https://i.pinimg.com/236x/4d/60/66/4d6066225e3b89f4c05e751cfa1710fd.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 5,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
             </div>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Coca-Cola</span>
+                <img src="https://pizzapub.com.mx/cdn/shop/products/coca_resize_800x.png?v=1620069609" alt="" class="img-item">
+                <span class="precio-item">S/. 5,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Jugo de Piña</span>
+                <img src="https://i.pinimg.com/564x/00/a3/48/00a34855d6a5a1ce2146292080a0b07f.jpg" alt="Nombre del Producto" class="img-item">
+                <span class="precio-item">S/. 10,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Birra Moretti</span>
+                <img src="https://i.pinimg.com/564x/35/2b/e3/352be3973c3a1f6b88290348b33c30df.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 12,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Caffè Italiano </span>
+                <img src="https://i.pinimg.com/564x/af/79/70/af7970c40ba167cffcdfb61fe37fc0d6.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 6,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Té de Hierbas Peruano </span>
+                <img src="https://i.pinimg.com/564x/23/11/42/23114224a200080f8a814d8ed4bba0c3.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 5,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Chocolate Caliente Peruano </span>
+                <img src="https://i.pinimg.com/564x/72/43/4a/72434a3440feabf6b2624defd677a46d.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 12,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Café con Leche</span>
+                <img src="https://i.pinimg.com/564x/95/c0/fa/95c0fa7eaadd18a4697bc6ede9f61a01.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 8,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Tè al Limone (Té al Limón Italiano)</span>
+                <img src="https://i.pinimg.com/564x/ae/52/be/ae52be625480cf797a8acb2609f7a1ab.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 7,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Jugo de Maracuyá</span>
+                <img src="https://i.pinimg.com/564x/58/c6/7c/58c67c336cb55f733e7f286c81ccdfe9.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 8,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Jugo de Lúcuma</span>
+                <img src="https://i.pinimg.com/564x/ba/1f/b8/ba1fb85c22b62868675734052dbdcfa3.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 10,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Jugo de Naranja Natural</span>
+                <img src="https://i.pinimg.com/564x/10/41/10/104110ea581a35aff9694906256f3410.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 7,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Jugo Verde Detox</span>
+                <img src="https://i.pinimg.com/736x/80/c3/7c/80c37c4751d6a473e11c151e0b10dbeb.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 9,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="bebida">
+                <span class="titulo-item">Succo di Pera (Jugo de Pera Italiano)</span>
+                <img src="https://i.pinimg.com/564x/2c/9d/c2/2c9dc228730b0f7d7654e9ff37205704.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="vino">
+                <span class="titulo-item">Vino Tinto Tacama</span>
+                <img src="https://www.tacama.com/wp-content/uploads/2023/11/SEMISECODELAVINAWEBT.png" alt="" class="img-item">
+                <span class="precio-item">S/. 30,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="vino">
+                <span class="titulo-item">Vino Blanco Tabali</span>
+                <img src="https://tienda.tabali.com/241-large_default/vetas-blancas-chardonnay.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 30,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="vino">
+                <span class="titulo-item">Chianti Classico</span>
+                <img src="https://virtute.pe/wp-content/uploads/2023/09/vino-italiano-tinto-chianti-classico-castelgreve-riserva-docg-castelli-del-grevepesa.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 40,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="vino">
+                <span class="titulo-item">Malbec Argentino</span>
+                <img src="https://lacanasteria.com/wp-content/uploads/2023/05/vino-catena-zapata-malbec-argentino.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 40,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="vino">
+                <span class="titulo-item">Vino Rosado Italiano (Chiaretto) </span>
+                <img src="https://virtute.pe/wp-content/uploads/2023/09/vino-italiano-rosado-chiaretto-doc-aldegheri.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 30,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="coctel">
+                <span class="titulo-item">Pisco Sour</span>
+                <img src="https://www.record.com.pe/wp-content/uploads/2021/07/Pisco-Sour-1.png" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="coctel">
+                <span class="titulo-item">Aperol Spritz</span>
+                <img src="https://i.pinimg.com/564x/3f/07/2f/3f072f390b105eb0c17c7503817a986f.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 20,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="coctel">
+                <span class="titulo-item">Mojito Peruano</span>
+                <img src="https://i.pinimg.com/564x/a5/0b/b2/a50bb22f5cc8d62438679d15f335c05c.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="coctel">
+                <span class="titulo-item">Bellini Italiano</span>
+                <img src="https://i.pinimg.com/564x/77/42/8d/77428d63d418ab8a0c2d6344de8e41e4.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 25,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="coctel">
+                <span class="titulo-item">Negroni Italiano</span>
+                <img src="https://i.pinimg.com/564x/46/5c/5d/465c5dce4c630d77d363b98647085427.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 25,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <!--/////////////////////////////////////////////
+                //////////////////////PIZZA///////////////////
+            //////////////////////////////////////////////////
+            /////////////////////////////////////////////////-->
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Mixta</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-mixta-carnes-y-vegetales-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 19,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Pollo</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pollo-domicilio-resto-bar-pizzeria-.jpg"  alt="" class="img-item">
+                <span class="precio-item">S/. 8,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Colombian Pizza</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-colombian-pizza-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 9,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Pepperoni</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pepperoni-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 9,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Tocineta</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-tocineta-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 5,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Hawaiana Piccolo</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-hawaiana-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 9,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Jamón y Queso</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-jamon-y-queso-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 19,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Salami</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-salami-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 8,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Cabano</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-cabano-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 9,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Dos Quesos con Manzana Verde</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-dos-quesos-manzana-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 9,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Queso azul + Jamón + Setas + Hortalizas</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-queso-azul-jamon-setas-hortalizas-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 5,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza O'Sole Mio</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-tocineta-mandarina-osole-mio-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 9,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Hawaiana + Tocineta</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-hawaiana-tocineta-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Pollo + Tocineta</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pollo-tocineta-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 6,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Tocineta + Maíz Tierno</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-tocineta-maiz-tierno-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Pollo + Champiñones</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pollo-champinones-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Carnes + Tocineta</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-carnes-tocineta-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 8,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Pepperoni + Champiñones</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pepperoni-champinones-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 12,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Carnes [ jamón, salami y cábano</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-carnes-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Jamón + Champiñones</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-jamon-champinones-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 8,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Mediterránea</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-mediterranea-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Napolitana + Rúgula + Aceitunas</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-napolitana-rugula-aceitunas-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 14,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Queso Azul + Salmón + Tomate Cherry</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-salmon-tomate-cherry-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 5,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Napolitana</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-napolitana-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Vegetales</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-vegetales-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="pizza">
+                <span class="titulo-item">Pizza Champiñones</span>
+                <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pizza-champinones-domicilio-resto-bar-pizzeria.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,50</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+
+
+            <!--
+                        /////////////////////////////////
+                        ///////////POSTRES///////////////
+                        /////////////////////////////////-->
+
+
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Tiramisu</span>
+                <img src="https://i.pinimg.com/564x/39/90/7c/39907cfb16ebfa54268cd9a99f209779.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Helado Artesanal Peruano</span>
+                <img src="https://i.pinimg.com/564x/fb/e6/62/fbe662ff9190a3af6cd7c80869fab673.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 10,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+
+
+
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Brownie con Helado</span>
+                <img src="https://i.pinimg.com/enabled/564x/fe/b8/7e/feb87e50a295b14e4ceba2feb68df8b9.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 18,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Suspiro a la Limeña</span>
+                <img src="https://i.pinimg.com/564x/bf/31/5a/bf315a7cc9a5ae762e51de543d3321f5.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 12,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Panna Cotta</span>
+                <img src="https://i.pinimg.com/736x/aa/0c/a3/aa0ca3a1bfacb220fbd4e059cc19a293.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Cheesecake de Lúcuma</span>
+                <img src="https://i.pinimg.com/736x/24/53/23/24532338ab1c080825bf9f2fa46323e8.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 18,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Flan Casero</span>
+                <img src="https://i.pinimg.com/564x/40/63/80/4063808acec90f8174c4efad2cb10df9.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 10,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Mousse de Chocolate</span>
+                <img src="https://i.pinimg.com/564x/af/8c/85/af8c8584bf75093bf03c2aeeb8b2e5ea.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 12,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Tarta de Manzana Italiana</span>
+                <img src="https://i.pinimg.com/564x/d1/6c/82/d16c8233d0523060e5a29c0a35ea2985.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="postre">
+                <span class="titulo-item">Gelato Italiano</span>
+                <img src="https://i.pinimg.com/enabled/564x/12/24/75/12247503d95991627de8320ba20e2b01.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 10,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <!--///////////////////////////////
+            //////////////UTENSILIOS///////////
+            ///////////////////////////////////-->
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Cuchillo Chef</span>
+                <img src="https://www.plazachef.com/cdn/shop/files/3_d7422169-2ceb-4c52-9113-90685ddd4914.png?v=1716917491&width=600" alt="" class="img-item">
+                <span class="precio-item">S/. 50,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Tabla de Cortar</span>
+                <img src="https://dcocina.pe/wp-content/uploads/2024/01/CS74791502-1-600x600.png" alt="" class="img-item">
+                <span class="precio-item">S/. 25,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Espátula de Silicona</span>
+                <img src="https://i.pinimg.com/736x/88/72/89/887289f2d81ba19e96041515cfd303d5.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Rallador Multiusos</span>
+                <img src="https://www.plazachef.com/cdn/shop/products/Ralladorverde.jpg?v=1717021247&width=600" alt="" class="img-item">
+                <span class="precio-item">S/. 20,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Sartén Antiadherente</span>
+                <img src="https://i.pinimg.com/736x/55/25/99/552599a34d5d8861e28af081e59494a0.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 80,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Batidora de Mano</span>
+                <img src="https://i.pinimg.com/564x/aa/ea/b6/aaeab62d993c71ec228dcfa1cc88b1b7.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 70,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Cernidor de Harina</span>
+                <img src="https://i.pinimg.com/564x/43/bb/21/43bb212f1b490f01c9a3a5eb1006ab22.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 10,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Tijeras de Cocina</span>
+                <img src="https://i.pinimg.com/564x/cf/44/6d/cf446d59bcca32e0bcf9f2cb5a76037c.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 15,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Colador de Acero Inoxidable</span>
+                <img src="https://i.pinimg.com/564x/f2/6a/cf/f26acfd4076c690f192e007d45b43c7f.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 30,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+            <div class="item" data-categoria="utensilio">
+                <span class="titulo-item">Molde para Pizza</span>
+                <img src="https://dcocina.pe/wp-content/uploads/2022/01/SK20228000060-01.jpg" alt="" class="img-item">
+                <span class="precio-item">S/. 40,00</span>
+                <button class="boton-item">Añadir a la Orden</button>
+            </div>
+
+
+
+
+        </div>
         <!-- Carrito de Compras -->
         <div class="carrito" id="carrito">
             <div class="header-carrito">
-                <h2>Tu Carrito</h2>
+                <h2>Tu Orden</h2>
             </div>
 
             <div class="carrito-items">
-               
+
             </div>
             <div class="carrito-total">
                 <div class="fila">
@@ -81,176 +538,12 @@
                         $120.000,00
                     </span>
                 </div>
-                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+                <button class="btn-pagar">Realizar Pedido <i class="fa-solid fa-bag-shopping"></i> </button>
             </div>
         </div>
     </section>
-    <section class="contenedor">
-        <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
 
-            <div class="item" data-categoria="tarde">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="tarde">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="tarde">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="tarde">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-
-            <div class="item" data-categoria="noche">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <!-- Carrito de Compras -->
-            <div class="carrito" id="carrito">
-                <div class="header-carrito">
-                    <h2>Tu Carrito</h2>
-                </div>
-
-                <div class="carrito-items">
-
-                </div>
-                <div class="carrito-total">
-                    <div class="fila">
-                        <strong>Tu Total</strong>
-                        <span class="carrito-precio-total">
-                        $120.000,00
-                    </span>
-                    </div>
-                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
-                </div>
-            </div>
-    </section>
-    <section class="contenedor">
-        <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
-
-            <div class="item" data-categoria="noche">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="noche">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="fiesta">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="fiesta">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-
-            <div class="item" data-categoria="fiesta">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <!-- Carrito de Compras -->
-            <div class="carrito" id="carrito">
-                <div class="header-carrito">
-                    <h2>Tu Carrito</h2>
-                </div>
-
-                <div class="carrito-items">
-
-                </div>
-                <div class="carrito-total">
-                    <div class="fila">
-                        <strong>Tu Total</strong>
-                        <span class="carrito-precio-total">
-                        $120.000,00
-                    </span>
-                    </div>
-                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
-                </div>
-            </div>
-    </section>
-    <section class="contenedor">
-        <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
-
-            <div class="item" data-categoria="fiesta">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-
-            <div class="item" data-categoria="manana">
-                <span class="titulo-item">Retro Frappuccino</span>
-
-                <span class="precio-item">$ 16,50</span>
-                <button class="boton-item">Agregar al Carrito</button>
-            </div>
-            <!-- Carrito de Compras -->
-            <div class="carrito" id="carrito">
-                <div class="header-carrito">
-                    <h2>Tu Carrito</h2>
-                </div>
-
-                <div class="carrito-items">
-
-                </div>
-                <div class="carrito-total">
-                    <div class="fila">
-                        <strong>Tu Total</strong>
-                        <span class="carrito-precio-total">
-                        $120.000,00
-                    </span>
-                    </div>
-                    <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
-                </div>
-            </div>
-    </section>
-    <script th:src="@{/JavaScript/script-carrito.js}"></script>
+    <script src="app.js"></script>
     <footer th:replace="layout/footer :: footer"></footer>
 </body>
 </html>

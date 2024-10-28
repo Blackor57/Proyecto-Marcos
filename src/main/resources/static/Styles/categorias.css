@@ -36,6 +36,7 @@ body {
     top: 50%; /* Centra verticalmente */
     transform: translateY(-50%); /* Ajusta para centrar verticalmente */
     left: 0; /* Alineación a la izquierda */
+    border-radius: 1%;
 }
 
 .column-right {
@@ -43,12 +44,12 @@ body {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(93, 51, 51, 0.1);
     overflow-y: auto; /* Habilita el scroll vertical si el contenido es más largo */
 }
 
 .menu {
-    background-color: #efc0c0;
+    background-color: #ebdddd;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(252, 251, 251);
@@ -65,7 +66,7 @@ body {
 .menu h3 {
     font-size: 18px;
     font-weight: bold;
-    border-bottom: 0px solid #ff1a1a;
+    border-bottom: 0px solid #7a4444;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -97,10 +98,12 @@ body {
     padding: 20px;
 }
 .card-text {
-    color: #9a3939; /* Color de texto gris oscuro */
+    font-size: 16px !important;
+    color: #7a3e3ed0; /* Color de texto gris oscuro */
 }
 .card-title {
-    color: #780707; /* Color de texto gris oscuro */
+    font-size: 20px !important;
+    color: #661010; /* Color de texto gris oscuro */
 }
 .card-footer {
     display: flex;
@@ -113,15 +116,16 @@ body {
 
 .btn {
     padding: 10px 20px;
-    background-color: #ec0909;
+    background-color: #811111;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px !important;
 }
 
 .btn:hover {
-    background-color: #850d0d;
+    background-color: #4e0808;
 }
 
 h5 {
@@ -131,7 +135,7 @@ h5 {
 /*Estilos producto
 */
 .menu1 {
-    background-color: #ddebdf;
+    background-color: #ebdddd;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(252, 251, 251);
@@ -147,7 +151,7 @@ h5 {
 .menu1 h3 {
     font-size: 18px;
     font-weight: bold;
-    border-bottom: 0px solid #950707;
+    border-bottom: 0px solid #724444;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -167,15 +171,18 @@ h5 {
 }
 
 .product-image {
+    display: flex;              /* Asegúrate de que el contenedor sea un flex container */
+    justify-content: center;    /* Centra los elementos hijos horizontalmente */
+    align-items: center;        /* Centra los elementos hijos verticalmente (opcional) */
     flex: 40%;
     overflow: hidden;
-    border-radius: 8px 0 0 8px;
 }
 
 .product-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    width: 90%;                 /* Mantiene el ancho de la imagen */
+    height: auto;               /* Mantiene la proporción de la imagen */
+    object-fit: cover;          /* Cubre el área del contenedor */
+    border-radius: 50%;         /* Hace que la imagen sea circular */
 }
 
 .product-details {
@@ -201,7 +208,7 @@ h5 {
 .product-price {
     font-size: 18px;
     font-weight: bold;
-    color: #a65252;
+    color: #744040;
     margin-bottom: 10px;
 }
 
@@ -211,7 +218,7 @@ h5 {
 
 .btnA {
     padding: 10px 20px;
-    background-color: #9a3939;
+    background-color: #6e1313;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -219,7 +226,7 @@ h5 {
 }
 
 .btnA:hover {
-    background-color: #a65252;
+    background-color: #4e0808;
 }
 
 /* Media Query para pantallas más pequeñas */

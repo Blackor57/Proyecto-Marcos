@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" th:href="@{/Styles/Styles.css}"/>
+    <link rel="stylesheet"  th:href="@{/Styles/categorias.css}">
+    <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet"  th:href="@{/Styles/categorias.css}">
-    <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Teachers:wght@500&display=swap');
     </style>
@@ -23,67 +23,73 @@
 
 <header th:replace="layout/header :: header"></header>
 
+<main>
 
-    <div class="container">
-        <div class="column-left">
-            <img src="/img/product-shots-of-pizza-high-quality-4k-ultra-hd-free-photo.jpg" alt="Imagen">
-        </div>
-        
-        <div class="column-right">
-            <div class="menu">
-                <h2>CATEGORIAS</h2>
-                <!-- Primer conjunto de tarjetas -->
-                <div class="products-container">
-                    <div class="card">
-                        
-                        <div class="card-body">
-                            <h5 class="card-title">BEBIDAS</h5>
-                            <p class="card-text"><br>Podrás disfrutar de tu bebida favorita cómo y dónde quieras, con un sinfín de combinaciones donde elegir; frías, calientes, con leches o bebidas vegetales, con diferentes sabores.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-primary" data-url="bebidas.html">Descubre más</button>
-                        </div>
-                    </div>
-                    <div class="card">
 
-                        <div class="card-body">
-                            <h5 class="card-title">ALIMENTOS</h5>
-                            <p class="card-text"><br>Descubre cuál es el "perfect pairing" de tu bebida favorita. No te pierdas la variedad de productos que siempre preparamos para ti, con la mejor gama de sabores y de la mejor calidad.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-primary" data-url="ALIMENTOS.html">Descubre más</button>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Segundo conjunto de tarjetas -->
-                <div class="products-container">
-                    <div class="card">
-
-                        <div class="card-body">
-                            <h5 class="card-title">MERCH Y CAFÉ EN GRANO</h5>
-                            <p class="card-text"> <br> Nuestra pasión por el café solo se compara con nuestro amor por compartirlo.Ya sea que esté bebiendo solo o recibiendo invitados, disfrutar del café en casa debe ser una experiencia relajante, calmante y conmovedora.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-primary" data-url="MERCH.html">Descubre más</button>
-                        </div>
-                    </div>
-                    <div class="card">
-
-                        <div class="card-body">
-                            <h5 class="card-title">PACKS Y BOXES</h5>
-                            <p class="card-text"><br>Explora nuestra selección de Packs y Boxes diseñados para llevar tu experiencia Starbucks a donde quieras. Desde sets de café premium hasta cajas de regalo con nuestras delicias más queridas, encuentra el complemento perfecto para cada ocasión.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-primary" data-url="PACKS.html">Descubre más</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+<div class="container">
+    <div class="column-left">
+        <img src="https://i.pinimg.com/736x/d9/db/94/d9db947145fb931a2bd2b0dc46b59ac0.jpg" alt="Imagen">
     </div>
 
-    <footer th:replace="layout/footer :: footer"></footer>
+    <div class="column-right">
+        <div class="menu">
+            <h2>NUESTRAS CATEGORIAS</h2>
+            <!-- Primer conjunto de tarjetas -->
+            <div class="products-container">
+                <div class="card">
+                    <img src="https://missouririversup.com/wp-content/uploads/2022/06/pizza-con-vino-1024x637.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">BEBIDAS</h5>
+                        <p class="card-text"><br>"Refresca tu experiencia culinaria con nuestra selección de bebidas. Desde refrescos burbujeantes hasta cervezas artesanales, cada sorbo está diseñado para complementar perfectamente nuestras deliciosas pizzas. ¡Descubre la bebida ideal para acompañar tu comida!.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a th:href="@{/about/bebidas}" class="btn btn-primary">Descubre más</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/564x/a1/0a/3c/a10a3cd62d11a3dea29c6e194d69a164.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">PIZZAS</h5>
+                        <p class="card-text"><br>Sumérgete en un mundo de sabores con nuestras pizzas artesanales. Elaboradas con ingredientes frescos y de alta calidad, cada pizza es una obra maestra que combina tradición e innovación. ¡Elige tu favorita y deja que el sabor hable por sí mismo!</p>
+                    </div>
+                    <div class="card-footer">
+                        <a th:href="@{/about/pizzas}" class="btn btn-primary">Descubre más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo conjunto de tarjetas -->
+            <div class="products-container">
+                <div class="card">
+                    <img src="https://i.ytimg.com/vi/Xl_w4rPXSi4/maxresdefault.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">NUESTROS UTENSILIOS</h5>
+                        <p class="card-text"> <br> En nuestra pizzería, la calidad empieza desde la cocina. Conoce nuestros utensilios de primera categoría, diseñados para garantizar que cada pizza salga perfecta. ¡Porque cada detalle cuenta en la creación de una experiencia culinaria excepcional!</p>
+                    </div>
+                    <div class="card-footer">
+                        <a th:href="@{/about/utensilios}" class="btn btn-primary">Descubre más</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://i.pinimg.com/enabled/564x/99/97/95/999795b394c0a0235a6546578cc9b214.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">POSTRES</h5>
+                        <p class="card-text"><br>"Concluye tu comida con nuestras irresistibles dulces tentaciones. Desde el clásico tiramisú hasta el suave suspiro a la limeña, cada postre es una deliciosa fusión de sabores peruanos e italianos. ¡Déjate seducir por el placer de lo dulce!" Espero que esta versión sea justo lo que necesitas.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a th:href="@{/about/postres}" class="btn btn-primary">Descubre más</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</main>
+
+<footer th:replace="layout/footer :: footer"></footer>
+
+<script th:src="@{JavaScript/categoria.js}"></script>
 </body>
 </html>
