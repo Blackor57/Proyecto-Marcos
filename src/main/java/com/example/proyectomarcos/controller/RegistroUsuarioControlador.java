@@ -38,9 +38,8 @@ public class RegistroUsuarioControlador {
             } else if (e.getMessage().contains("email")) {
                 model.addAttribute("emailError", true);
             }
-            // Agrega el objeto registroDTO de nuevo al modelo para rellenar el formulario
             model.addAttribute("usuario", registroDTO);
-            return "registro"; // Renderiza la vista de registro con el modelo actualizado
+            return "registro";
         }
     }
 }

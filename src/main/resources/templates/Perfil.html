@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1  0">
@@ -30,31 +30,22 @@
             <img src="/img/profile.png" alt="Foto de perfil">
         </div>
         <div class="nombre-container">
-            <p><span class="nombre">Jhoel Alonso</span></p>
+            <p><span class="nombre" th:text="${usuario.nombre}">Nombre del Usuario</span></p>
         </div>
         <div class="detalle-container">
-            <xdd>
-                <ul>
-                    <li><strong>Apellido:</strong> Tinipuclla Huaman </li>
-                    <li><strong>Cumpleaños:</strong>10/12/04 </li>
-                    <li><strong>DNI:</strong> 80124322</li>
-                    <li><strong>Email:</strong>user@gmail.com </li>
-                    <li><strong>Número de celular:</strong> 912 312 312</li>
-                </ul>
-            </xdd>
+            <ul class="perfil-lista">
+                <li class="perfil-item"><strong>Apellido:</strong> <span th:text="${usuario.apellidos}">Apellido del Usuario</span></li>
+                <li class="perfil-item"><strong>Nacimientos:</strong> <span th:text="${usuario.fecNac}">Fecha de cumpleaños</span></li>
+                <li class="perfil-item"><strong>DNI:</strong> <span th:text="${usuario.dni}">Número de DNI</span></li>
+                <li class="perfil-item"><strong>Email:</strong> <span th:text="${usuario.email}">Correo electrónico</span></li>
+                <li class="perfil-item"><strong>Número de celular:</strong> <span th:text="${usuario.telefono}">Número de celular</span></li>
+            </ul>
         </div>
     </div>
 </main>
 <br>
 
-
-
-
-
-
 <footer th:replace="layout/footer :: footer"></footer>
-
-<script th:src="@{JavaScript/ordenes.js}"></script>
 
 </body>
 </html>

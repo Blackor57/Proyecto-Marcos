@@ -44,6 +44,10 @@ public class UsuarioServicioImpl implements UsuarioServicio {
         return usuarioRepositorio.save(usuario);
     }
 
+    @Override
+    public Usuario buscarPorEmail(String email) {
+        return usuarioRepositorio.findByEmail(email);
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
