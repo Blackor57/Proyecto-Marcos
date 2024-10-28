@@ -33,9 +33,4 @@ public class FrontController {
         return "personaliza";
     }
 
-    @GetMapping("/perfil")
-    public String perfil() {
-        return "Perfil";
-    }
-
 }
