@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="https://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/Styles/Styles.css}"/>
+    <link rel="stylesheet"  th:href="@{/Styles/categorias.css}">
+    <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Teachers:wght@500&display=swap');
+    </style>
+
+    <link rel="shortcut icon" th:href="@{../../static/img/pizza.png}" type="image/x-icon">
+    <!--Stylos-->
+    <title>Pizzeria Pizza</title>
+</head>
+<body>
+
+<header th:replace="layout/header :: header"></header>
+
+<main>
+
+
+
+    <div class="container">
+        <div class="column-left">
+            <img src="https://i.pinimg.com/enabled/564x/ec/a0/85/eca085f9e21e4a020feb016920ec51a3.jpg" alt="Imagen">
+        </div>
+
+        <div class="column-right">
+            <div class="menu1">
+                <h2>Menú de Bebidas</h2>
+                <h3><br>Bebidas Frías</h3>
+                <!-- Primer conjunto de tarjetas -->
+                <div class="product-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/33/58/f2/3358f246baa9a431107f6136b51cf7d6.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Chicha Morada</h3>
+                            <p class="product-description">Refrescante y dulce, esta bebida tradicional peruana hecha de maíz morado es perfecta para acompañar tu pizza.</p>
+                            <p class="product-price"> S/. 8.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/236x/4d/60/66/4d6066225e3b89f4c05e751cfa1710fd.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Inca Kola</h3>
+                            <p class="product-description">Con su característico sabor a chicle, este refresco peruano es un clásico que no puede faltar en tu mesa.</p>
+
+                            <p class="product-price">S/. 5.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://pizzapub.com.mx/cdn/shop/products/coca_resize_800x.png?v=1620069609" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Coca-Cola</h3>
+                            <p class="product-description">Con su característico sabor a chicle, este refresco peruano es un clásico que no puede faltar en tu mesa.</p>
+
+                            <p class="product-price">S/. 5.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/00/a3/48/00a34855d6a5a1ce2146292080a0b07f.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Jugo de Piña</h3>
+                            <p class="product-description">Un jugo fresco y tropical que aporta un toque dulce y vibrante a tu experiencia gastronómica.</p>
+                            <p class="product-price">S/. 10.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Tarjeta 5-->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/35/2b/e3/352be3973c3a1f6b88290348b33c30df.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Birra Moretti</h3>
+                            <p class="product-description">Cerveza italiana con un sabor suave y refrescante, perfecta para realzar los sabores de tu comida.</p>
+                            <p class="product-price">S/. 12.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div> <!-- Fin de product-grid -->
+
+                <h3><br>Bebidas Calientes</h3>
+                <!-- Primer conjunto de tarjetas -->
+                <div class="product-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/af/79/70/af7970c40ba167cffcdfb61fe37fc0d6.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Caffè Italiano  </h3>
+                            <p class="product-description">Un espresso intenso y aromático que despierta los sentidos; el compañero perfecto para tus postres. </p>
+                            <p class="product-price">S/. 6.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/23/11/42/23114224a200080f8a814d8ed4bba0c3.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Té de Hierbas Peruano </h3>
+                            <p class="product-description">Esta infusión herbal te ofrece un momento de calma y bienestar, ideal para relajarte después de la comida. </p>
+                            <p class="product-price">S/. 5.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/72/43/4a/72434a3440feabf6b2624defd677a46d.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Chocolate Caliente Peruano </h3>
+                            <p class="product-description">Rico y cremoso, este chocolate caliente hecho con cacao peruano es un abrazo cálido en cada sorbo. </p>
+                            <p class="product-price"> S/. 12.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/95/c0/fa/95c0fa7eaadd18a4697bc6ede9f61a01.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Café con Leche</h3>
+                            <p class="product-description">Una mezcla perfecta de café expreso y leche caliente que reconforta y satisface en cualquier momento.</p>
+                            <p class="product-price">S/. 8.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5-->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/ae/52/be/ae52be625480cf797a8acb2609f7a1ab.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Tè al Limone (Té al Limón Italiano)</h3>
+                            <p class="product-description">Ligero y refrescante, este té caliente con limón es ideal para limpiar el paladar entre bocados. </p>
+                            <p class="product-price">S/. 7.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <h3><br>Jugos Naturales</h3>
+                <!-- Primer conjunto de tarjetas -->
+                <div class="product-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/58/c6/7c/58c67c336cb55f733e7f286c81ccdfe9.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Jugo de Maracuyá</h3>
+                            <p class="product-description">Exótico y vibrante, este jugo natural aporta un sabor tropical que complementa perfectamente tu pizza. </p>
+                            <p class="product-price">S/. 8.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/ba/1f/b8/ba1fb85c22b62868675734052dbdcfa3.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Jugo de Lúcuma </h3>
+                            <p class="product-description">Suave y dulce, este jugo hecho con lúcuma es una delicia única que te transportará a Perú en cada sorbo. </p>
+                            <p class="product-price"> S/. 10.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/10/41/10/104110ea581a35aff9694906256f3410.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Jugo de Naranja Natural </h3>
+                            <p class="product-description">Fresco y revitalizante, exprimido al momento para ofrecerte el mejor sabor en cada vaso.</p>
+                            <p class="product-price">S/. 7.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/736x/80/c3/7c/80c37c4751d6a473e11c151e0b10dbeb.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Jugo Verde Detox</h3>
+                            <p class="product-description">Refrescante mezcla de espinaca y manzana verde; una opción saludable que te hará sentir ligero y fresco.</p>
+                            <p class="product-price">S/. 9.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/2c/9d/c2/2c9dc228730b0f7d7654e9ff37205704.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Succo di Pera (Jugo de Pera Italiano)</h3>
+                            <p class="product-description">Suave y dulce, este jugo italiano es el complemento perfecto para equilibrar los sabores intensos de la pizza.</p>
+                            <p class="product-price">S/. 15.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3><br>Vinos</h3>
+                <!-- Primer conjunto de tarjetas -->
+                <div class="product-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.tacama.com/wp-content/uploads/2023/11/SEMISECODELAVINAWEBT.png" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Vino Tinto Tacama</h3>
+                            <p class="product-description">Con notas frutales y un final suave, este vino tinto peruano realza los sabores de tus platos favoritos.</p>
+                            <p class="product-price">S/. 30.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://tienda.tabali.com/241-large_default/vetas-blancas-chardonnay.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Vino Blanco Tabali</h3>
+                            <p class="product-description">Fresco y ligero, ideal para maridar con pizzas ligeras o ensaladas; un verdadero placer en cada sorbo.</p>
+                            <p class="product-price">S/. 30.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://virtute.pe/wp-content/uploads/2023/09/vino-italiano-tinto-chianti-classico-castelgreve-riserva-docg-castelli-del-grevepesa.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Chianti Classico </h3>
+                            <p class="product-description">Este vino tinto italiano robusto es perfecto para acompañar pizzas tradicionales con salsa de tomate rica en sabor.</p>
+                            <p class="product-price"> S/. 40.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://lacanasteria.com/wp-content/uploads/2023/05/vino-catena-zapata-malbec-argentino.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Malbec Argentino</h3>
+                            <p class="product-description">Con su cuerpo intenso, este vino tinto complementa maravillosamente las pizzas más contundentes y sabrosas.</p>
+                            <p class="product-price">S/. 40.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://virtute.pe/wp-content/uploads/2023/09/vino-italiano-rosado-chiaretto-doc-aldegheri.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Vino Rosado Italiano (Chiaretto) </h3>
+                            <p class="product-description">Ligero y afrutado, este vino rosado es ideal para disfrutar en días cálidos junto a una pizza fresca.</p>
+                            <p class="product-price"> S/. 30.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <h3><br>Cócteles</h3>
+                <!-- Primer conjunto de tarjetas -->
+                <div class="product-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.record.com.pe/wp-content/uploads/2021/07/Pisco-Sour-1.png" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pisco Sour</h3>
+                            <p class="product-description">Este cóctel emblemático combina pisco, limón y clara de huevo; una explosión de frescura que despierta el paladar antes de la comida.</p>
+                            <p class="product-price">S/. 15.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/3f/07/2f/3f072f390b105eb0c17c7503817a986f.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Aperol Spritz</h3>
+                            <p class="product-description">Refrescante y burbujeante, este cóctel italiano es perfecto para abrir el apetito antes de disfrutar tu pizza favorita.</p>
+                            <p class="product-price">S/. 20.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/a5/0b/b2/a50bb22f5cc8d62438679d15f335c05c.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Mojito Peruano</h3>
+                            <p class="product-description">Con hierbabuena fresca y un toque de limón, este mojito es refrescante y ligero; ideal para acompañar la comida sin abrumar los sabores.</p>
+                            <p class="product-price"> S/. 15.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/77/42/8d/77428d63d418ab8a0c2d6344de8e41e4.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Bellini Italiano </h3>
+                            <p class="product-description">Un cóctel elegante a base de puré de durazno y prosecco; perfecto para brindar en cualquier ocasión especial.</p>
+                            <p class="product-price">S/. 25.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.pinimg.com/564x/46/5c/5d/465c5dce4c630d77d363b98647085427.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Negroni Italiano</h3>
+                            <p class="product-description">Con su mezcla intensa de ginebra, vermut rojo y Campari, este clásico italiano es ideal para quienes buscan una experiencia audaz en cada sorbo.</p>
+                            <p class="product-price">  S/. 25.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+</main>
+
+<footer th:replace="layout/footer :: footer"></footer>
+
+<script th:src="@{JavaScript/categoria.js}"></script>
+</body>
+</html>

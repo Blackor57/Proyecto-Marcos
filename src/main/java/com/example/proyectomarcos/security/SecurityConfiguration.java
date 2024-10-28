@@ -38,8 +38,8 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/", "/index", "/about", "/order",
-                                "/personaliza", "/reclamation", "/rewards",
+                        .requestMatchers("/", "/index", "/about/**", "/order",
+                                "/personaliza/**", "/reclamation", "/rewards",
                                 "/comprar", "/registro/**", "/JavaScript/**",
                                 "/Styles/**", "/img/**").permitAll()
                         .requestMatchers("/perfil").authenticated()

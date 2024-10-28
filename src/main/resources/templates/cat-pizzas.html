@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="https://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/Styles/Styles.css}"/>
+    <link rel="stylesheet"  th:href="@{/Styles/categorias.css}">
+    <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Teachers:wght@500&display=swap');
+    </style>
+
+    <link rel="shortcut icon" th:href="@{../../static/img/pizza.png}" type="image/x-icon">
+    <!--Stylos-->
+    <title>Pizzeria Pizza</title>
+</head>
+<body>
+
+<header th:replace="layout/header :: header"></header>
+
+<main>
+
+
+
+    <div class="container">
+        <div class="column-left">
+            <img src="https://i.pinimg.com/enabled/564x/3d/17/13/3d1713ae978fbdbce3c21acd57606e41.jpg" alt="Imagen">
+        </div>
+
+        <div class="column-right">
+            <div class="menu1">
+                <h2>PIZZAS</h2>
+                <h3><br>Pizzas inigualables</h3>
+                <!-- Primer conjunto de tarjetas -->
+                <div class="product-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-mixta-carnes-y-vegetales-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Mixta</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, carnes premium de la casa; jamón, salami y cábano, con tomate, pimentón y cebolla. Perfecta combinación de carnes con vegetales. </p>
+                            <p class="product-price">S/ 19.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pollo-domicilio-resto-bar-pizzeria-.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Pollo</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, pollo "delicatessen". Exquisito, pruébalo yá. ¡Te encantará!</p>
+
+                            <p class="product-price">S/ 8.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-colombian-pizza-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Colombian Pizza</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, creación única, con chorizo Piccolo, maíz tierno y aguacate.</p>
+                            <p class="product-price">S/ 9.00</p>
+                            </p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pepperoni-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Pepperoni</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, pepperoni con ligero toque picante. </p>
+                            <p class="product-price">S/ 9.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-tocineta-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Tocineta</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, tocineta ahumada. Tostadita y siempre deliciosa. ¡Atrévete!</p>
+                            <p class="product-price">S/ 5.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-hawaiana-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Hawaiana Piccolo</h3>
+                            <p class="product-description">Base delgada y crocante, salsa de piña natural, queso mozzarella, jamón y trozos de piña dulce. Exótica pizza con sabor tropical ¡Tropicalísima! </p>
+                            <p class="product-price">S/ 9.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-jamon-y-queso-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Jamón y Queso</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, jamón horneado. Una pizza apetecida por su exquisito gusto.</p>
+                            <p class="product-price">S/ 19.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 8 -->
+                    <div class="product-card">
+                        <div class="product-image">
+
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-salami-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Salami</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, nuestro Salami con el sabor fuerte del viejo mundo. Delicioso sabor. ¡Italianísima!</p>
+
+                            <p class="product-price">S/ 8.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 9 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-cabano-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Cabano</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, cabano con una cerveza la perfecta combinación.</p>
+                            <p class="product-price">S/ 9.00</p>
+                            </p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 10 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-dos-quesos-manzana-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Dos Quesos con Manzana Verde</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, pepperoni con ligero toque picante. </p>
+                            <p class="product-price">S/ 9.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 11 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-queso-azul-jamon-setas-hortalizas-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Queso azul + Jamón + Setas + Hortalizas</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, jamón, queso azul y queso mozzarella, acompañado con champiñones frescos y rúgula. Finalizada con nuestra salsa rúgula. Sabor sublime.</p>
+                            <p class="product-price">S/ 5.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 12 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-tocineta-mandarina-osole-mio-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza O'Sole Mio</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, tocineta ahumada, acompañada con cascos de mandarina fresca. (exclusiva de temporada). </p>
+                            <p class="product-price">S/ 9.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- Fin de product-grid -->
+
+
+                <h3><br>Pizzas irresistibles.</h3>
+                <!-- Primer conjunto de tarjetas -->
+                <div class="product-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-hawaiana-tocineta-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Hawaiana + Tocineta</h3>
+                            <p class="product-description">Base delgada y crocante, salsa de piña natural, queso mozzarella, trozos de piña aromática y dulce, tocineta ahumada y jamón horneado. Excepcional sabor. </p>
+                            <p class="product-price">S/ 15.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pollo-tocineta-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Pollo + Tocineta</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, pollo "delicatessen" con magnifica tocineta ahumada Piccolo. </p>
+                            <p class="product-price">S/ 6.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-tocineta-maiz-tierno-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Tocineta + Maíz Tierno</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, sensacional pizza de tocineta ahumada Piccolo y maíz tierno.  </p>
+                            <p class="product-price">S/ 15.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pollo-champinones-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Pollo + Champiñones</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, exquisito pollo "delicatessen" y champiñones frescos. Un sabor realmente atractivo.</p>
+                            <p class="product-price">S/ 15.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-carnes-tocineta-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Carnes + Tocineta</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, tocineta y las carnes premium Piccolo [ jamón, salami y cábano ]. Excepcional. </p>
+                            <p class="product-price">S/ 8.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pepperoni-champinones-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Pepperoni + Champiñones</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, pepperoni con ligero toque picante y frescos champiñones. Un sabor que te hará vibrar.</p>
+                            <p class="product-price">S/ 12.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-carnes-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Carnes [ jamón, salami y cábano ]</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, las carnes premium Piccolo [ jamón, salami y cábano ]. Calidad insuperable.</p>
+                            <p class="product-price">S/ 15.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 8 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-jamon-champinones-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Jamón + Champiñones</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, jamón horneado y frescos champiñones un clásico inolvidable.  </p>
+                            <p class="product-price">S/ 8.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <h3><br>Pizzas exquisitas.</h3>
+                <!-- Primer conjunto de tarjetas -->
+                <div class="product-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-mediterranea-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Mediterránea</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, y el delicioso sabor de la huerta con pimentón asado, calabacín, zucchini, aceitunas y tomates marinados. </p>
+                            <p class="product-price">S/ 15.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-napolitana-rugula-aceitunas-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Napolitana + Rúgula + Aceitunas</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, rodajas de tomates frescos horneados con rúgula del huerto y aceitunas.</p>
+                            <p class="product-price">S/ 14.00</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-salmon-tomate-cherry-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Queso Azul + Salmón + Tomate Cherry</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso azul y queso mozzarella, salmón y tomates cherry delicias de los paladares más exigentes.</p>
+                            <p class="product-price">S/ 5.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-napolitana-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Napolitana</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, Auténtica pizza Italiana, con rodajas de tomates al horno y albahaca fresca de la huerta Piccolo.</p>
+                            <p class="product-price">S/ 15.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-vegetales-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Vegetales</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, los frutos del campo [ frescos tomates, pimentón, cebolla, ajo y ricos champiñones ]. ¡Te encantará!.</p>
+                            <p class="product-price">S/ 15.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.pizzaspiccolo.com.co//wp-content/uploads/2024/02/pizzas-piccolo-pizza-pizza-champinones-domicilio-resto-bar-pizzeria.jpg" alt="Nombre del Producto">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Pizza Champiñones</h3>
+                            <p class="product-description">Base delgada y crocante, exclusiva salsa napolitana, queso mozzarella, Champiñones frescos y de suave sabor. Deliciosos!!.</p>
+                            <p class="product-price">S/ 15.50</p>
+                            <div class="product-actions">
+                                <button class="btnA btn-info">Más Información</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer th:replace="layout/footer :: footer"></footer>
+
+<script th:src="@{JavaScript/categoria.js}"></script>
+</body>
+</html>

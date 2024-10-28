@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             // Obtener la URL del atributo 'data-url'
             const url = this.getAttribute('data-url');
-            
+
             // Redireccionar a la URL especificada
             window.location.href = url;
         });
