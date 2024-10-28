@@ -40,6 +40,9 @@
                 <p>Pizzeria Rewards</p>
             </div>
             <p>Ingresa a tu cuenta Pizzeria Rewards para ganar Estrellas con tus compras y canjearlas por tus productos favoritos</p>
+            <div th:if="${param.loginError}">
+                <div class="alert alert-danger">Usuario o Contraseña Erroneos</div>
+            </div>
             <form th:action="@{/login}" method="post">
                 <div class="input__div">
                     <label for="emails">Correo electrónico:</label>
@@ -80,6 +83,9 @@
                         <label for="apellido">Apellidos:</label>
                         <input id="apellido" type="text" th:field="*{apellidos}" required>
                     </div>
+                    <div th:if="${param.dniError}">
+                        <div class="alert alert-danger">El DNI ya está registrado o es inválido.</div>
+                    </div>
                     <div class="form__group">
                         <label for="dni">DNI:</label>
                         <input id="dni" type="text" th:field="*{dni}" required>
@@ -96,6 +102,9 @@
 
                 <div class="form__section">
                     <h3><i>Información de Cuenta</i></h3>
+                    <div th:if="${param.emailError}">
+                        <div class="alert alert-danger">El Email ya está registrado o es inválido.</div>
+                    </div>
                     <div class="form__group">
                         <label for="email">Correo Electrónico:</label>
                         <input id="email" type="email" th:field="*{email}" required>
@@ -116,6 +125,6 @@
 
 <footer th:replace="layout/footer :: footer"></footer>
 
-<script th:src="@{/JavaScript/login2.js}"></script>
+<script th:src="@{/JavaScript/login3.js}"></script>
 </body>
 </html>
