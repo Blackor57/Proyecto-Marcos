@@ -1,8 +1,8 @@
 package com.example.proyectomarcos.service;
 
-import com.example.proyectomarcos.model.Carne;
-import com.example.proyectomarcos.model.Ingrediente;
-import com.example.proyectomarcos.model.Pizza;
+import com.example.proyectomarcos.model.entity.Carne;
+import com.example.proyectomarcos.model.entity.Ingrediente;
+import com.example.proyectomarcos.model.entity.Pizza;
 import com.example.proyectomarcos.repository.ICarne;
 import com.example.proyectomarcos.repository.IIngrendiente;
 import com.example.proyectomarcos.repository.IPizza;

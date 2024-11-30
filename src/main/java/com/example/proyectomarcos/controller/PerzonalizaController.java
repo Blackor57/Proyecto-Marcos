@@ -1,8 +1,8 @@
 package com.example.proyectomarcos.controller;
 
-import com.example.proyectomarcos.model.Carne;
-import com.example.proyectomarcos.model.Ingrediente;
-import com.example.proyectomarcos.model.Pizza;
+import com.example.proyectomarcos.model.entity.Carne;
+import com.example.proyectomarcos.model.entity.Ingrediente;
+import com.example.proyectomarcos.model.entity.Pizza;
 import com.example.proyectomarcos.service.CarneService;
 import com.example.proyectomarcos.service.IngredienteService;
 import com.example.proyectomarcos.service.PizzaService;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller

@@ -1,13 +1,18 @@
-package com.example.proyectomarcos.model;
+package com.example.proyectomarcos.model.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.sql.Date;
 import java.util.Collection;
 
 @Entity
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "usuarios", uniqueConstraints = {
         @UniqueConstraint(columnNames = "email"),
         @UniqueConstraint(columnNames = "dni")
@@ -44,30 +49,4 @@ public class Usuario {
             joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "rol_id", referencedColumnName = "id"))
     private Collection<Rol> roles;
-
-    public Usuario(Long id, String nombre, String apellidos, String dni, String fecNac, String telefono, String email, String password, Collection<Rol> roles) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.dni = dni;
-        this.fecNac = fecNac;
-        this.telefono = telefono;
-        this.email = email;
-        this.password = password;
-        this.roles = roles;
-    }
-
-    public Usuario(String nombre, String apellidos, String dni, String fecNac, String telefono, String email, String password, Collection<Rol> roles) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.dni = dni;
-        this.fecNac = fecNac;
-        this.telefono = telefono;
-        this.email = email;
-        this.password = password;
-        this.roles = roles;
-    }
-
-    public Usuario() {
-    }
 }

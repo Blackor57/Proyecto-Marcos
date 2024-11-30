@@ -1,6 +1,6 @@
 package com.example.proyectomarcos.controller;
 
-import com.example.proyectomarcos.model.Usuario;
+import com.example.proyectomarcos.model.entity.Usuario;
 import com.example.proyectomarcos.service.UsuarioServicio;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

@@ -1,12 +1,12 @@
-package com.example.proyectomarcos.model;
+package com.example.proyectomarcos.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "det_pizza")
-public class DetPizza {
+@Table(name = "det_adi")
+public class DetAdicional {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,11 +19,10 @@ public class DetPizza {
     private double subtotal;
 
     @ManyToOne
-    @JoinColumn(name = "id_pizza")
-    private Pizza pizza;
+    @JoinColumn(name = "id_adicional", nullable = false)
+    private Adicional adicional;
 
     @ManyToOne
-    @JoinColumn(name = "id_orden")
+    @JoinColumn(name = "id_orden", nullable = false)
     private Orden orden;
-
 }

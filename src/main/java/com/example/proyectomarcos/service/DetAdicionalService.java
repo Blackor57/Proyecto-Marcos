@@ -1,6 +1,6 @@
 package com.example.proyectomarcos.service;
 
-import com.example.proyectomarcos.model.DetAdicional;
+import com.example.proyectomarcos.model.entity.DetAdicional;
 import com.example.proyectomarcos.repository.IDetAdicional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

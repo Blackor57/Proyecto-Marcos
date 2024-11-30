@@ -1,6 +1,6 @@
 package com.example.proyectomarcos.controller;
 
-import com.example.proyectomarcos.dto.UsuarioRegistroDTO;
+import com.example.proyectomarcos.model.dto.UsuarioRegistroDTO;
 import com.example.proyectomarcos.service.UsuarioServicio;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;

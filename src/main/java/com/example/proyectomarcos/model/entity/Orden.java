@@ -1,4 +1,4 @@
-package com.example.proyectomarcos.model;
+package com.example.proyectomarcos.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -26,6 +26,4 @@ public class Orden {
 
     @Column(name = "dni")
     private String dni;
-
-
 }

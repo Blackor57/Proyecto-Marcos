@@ -1,6 +1,6 @@
 package com.example.proyectomarcos.service;
 
-import com.example.proyectomarcos.model.DetPizza;
+import com.example.proyectomarcos.model.entity.DetPizza;
 import com.example.proyectomarcos.repository.IDetPizza;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

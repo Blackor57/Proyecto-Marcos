@@ -1,8 +1,8 @@
 package com.example.proyectomarcos.service;
 
-import com.example.proyectomarcos.dto.UsuarioRegistroDTO;
-import com.example.proyectomarcos.model.Rol;
-import com.example.proyectomarcos.model.Usuario;
+import com.example.proyectomarcos.model.dto.UsuarioRegistroDTO;
+import com.example.proyectomarcos.model.entity.Rol;
+import com.example.proyectomarcos.model.entity.Usuario;
 import com.example.proyectomarcos.repository.IUsuario;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -14,8 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -31,16 +29,16 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 
     @Override
     public Usuario save(UsuarioRegistroDTO registroDTO) {
-        Usuario usuario = new Usuario(
-                registroDTO.getNombre(),
-                registroDTO.getApellidos(),
-                registroDTO.getDni(),
-                registroDTO.getFecNac(),
-                registroDTO.getTelefono(),
-                registroDTO.getEmail(),
-                passwordEncoder.encode(registroDTO.getPassword()),
-                Arrays.asList(new Rol("ROLE_USER"))
-        );
+        Usuario usuario = Usuario.builder()
+                .nombre(registroDTO.getNombre())
+                .apellidos(registroDTO.getApellidos())
+                .dni(registroDTO.getDni())
+                .fecNac(registroDTO.getFecNac())
+                .telefono(registroDTO.getTelefono())
+                .email(registroDTO.getEmail())
+                .password(passwordEncoder.encode(registroDTO.getPassword()))
+                .roles(Arrays.asList(new Rol("ROLE_USER")))
+                .build();
         return usuarioRepositorio.save(usuario);
     }
 

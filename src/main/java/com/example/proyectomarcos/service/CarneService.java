@@ -1,6 +1,6 @@
 package com.example.proyectomarcos.service;
 
-import com.example.proyectomarcos.model.Carne;
+import com.example.proyectomarcos.model.entity.Carne;
 import com.example.proyectomarcos.repository.ICarne;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.example.proyectomarcos.controller;
 
-import com.example.proyectomarcos.model.Pizza;
+import com.example.proyectomarcos.model.entity.Pizza;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
