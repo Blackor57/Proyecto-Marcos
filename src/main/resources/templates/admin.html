@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Ventas - Pizzería</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/Styles/adminestilo.css}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body>
+  <div class="container-fluid">
+    <div class="row flex-nowrap"> <!-- Flexbox para garantizar que sidebar y main estén en fila -->
+      <!-- Sidebar -->
+      <nav class="col-12 col-md-3 sidebar">
+        <h4>Panel de Ventas</h4>
+        <a class="nav-link" href="#"><i class="fas fa-home"></i> Dashboard</a>
+        <a class="nav-link" href="#"><i class="fas fa-pizza-slice"></i> Menú</a>
+        <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Reportes de Ventas</a>
+
+        <!-- Logotipo dentro del Sidebar, al final en modo vertical -->
+        <div class="logotipo-container">
+          <img src="/img/favicon.png" alt="Logotipo" class="img-fluid logotipo">
+        </div>
+      </nav>
+
+      <!-- Main content -->
+      <main class="col-12 col-md-9 main-content">
+        <h1 class="h2">Dashboard de Ventas</h1>
+        <div class="row justify-content-center">
+          <!-- Card para Pedidos de Hoy -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Pedidos de Hoy</h5>
+                <p class="card-text" data-target="120">0</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card para Ingresos del Día -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Ingresos del Día</h5>
+                <p class="card-text" data-target="1500">$0</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card para Desayunos Vendidos -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Desayunos Vendidos</h5>
+                <p class="card-text" data-target="250">0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script th:src="@{JavaScript/admin.js}"></script> <!-- Enlazamos el archivo JS -->
+</body>
+</html>
