@@ -20,7 +20,7 @@
     <title>Pizzeria Pizza</title>
 </head>
 <body>
-<header th:replace="layout/header :: header"></header>
+<header th:replace="layout/Nav :: header"></header>
 
 <main>
 
@@ -28,22 +28,12 @@
         <div>
             <h3>Preparando</h3>
             <div class="list__container" id="list1">
-                <div class="list__item" draggable="true">
+                <div class="list__item" th:each="pizza : ${preparandoList}" draggable="true">
                     <img src="/img/pizzaItem.jpeg" alt="Pizza Imagen" draggable="false">
                     <div>
-                        <p><b>Inicio</b><br>08:45 PM</p>
-                        <p><b>Cliente:</b><br>Pedro</p>
-                        <p><b>Código:</b><br>4B47JCS</p>
-                        <p><b>Pedido:</b><br>Pizza Americana con Aceituna</p>
-                    </div>
-                </div>
-                <div class="list__item" draggable="true">
-                    <img src="/img/pizzaItem.jpeg" alt="Pizza Imagen" draggable="false">
-                    <div>
-                        <p><b>Inicio</b><br>08:45 PM</p>
-                        <p><b>Cliente:</b><br>Andres</p>
-                        <p><b>Código:</b><br>J78LK0</p>
-                        <p><b>Pedido:</b><br>Pizza Hawaiana</p>
+                        <p><b>Código:</b> <span th:text="${pizza.getId()}"></span></p>
+                        <p><b>Nombre:</b> <span th:text="${pizza.getOrden().getNombre()}"></span></p>
+                        <p><b>Tamaño:</b> <span th:text="${pizza.getPizza().getTamano()}"></span></p>
                     </div>
                 </div>
 
@@ -52,13 +42,27 @@
         <div>
             <h3>En el horno</h3>
             <div class="list__container" id="list2">
-
+                <div class="list__item" th:each="pizza : ${hornoList}" draggable="true">
+                    <img src="/img/pizzaItem.jpeg" alt="Pizza Imagen" draggable="false">
+                    <div>
+                        <p><b>Código:</b> <span th:text="${pizza.getId()}"></span></p>
+                        <p><b>Nombre:</b> <span th:text="${pizza.getOrden().getNombre()}"></span></p>
+                        <p><b>Tamaño:</b> <span th:text="${pizza.getPizza().getTamano()}"></span></p>
+                    </div>
+                </div>
             </div>
         </div>
         <div>
             <h3>Terminado</h3>
             <div class="list__container" id="list3">
-
+                <div class="list__item" th:each="pizza : ${terminadoList}" draggable="true">
+                    <img src="/img/pizzaItem.jpeg" alt="Pizza Imagen" draggable="false">
+                    <div>
+                        <p><b>Código:</b> <span th:text="${pizza.getId()}"></span></p>
+                        <p><b>Nombre:</b> <span th:text="${pizza.getOrden().getNombre()}"></span></p>
+                        <p><b>Tamaño:</b> <span th:text="${pizza.getPizza().getTamano()}"></span></p>
+                    </div>
+                </div>
             </div>
         </div>
 

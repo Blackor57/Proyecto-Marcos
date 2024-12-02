@@ -18,6 +18,9 @@ public class DetPizza {
     @Column(name = "subtotal")
     private double subtotal;
 
+    @Column(name = "estado")
+    private String estado;
+
     @ManyToOne
     @JoinColumn(name = "id_pizza")
     private Pizza pizza;

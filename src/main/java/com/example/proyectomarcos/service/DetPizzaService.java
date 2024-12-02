@@ -1,7 +1,9 @@
 package com.example.proyectomarcos.service;
 
 import com.example.proyectomarcos.model.entity.DetPizza;
+import com.example.proyectomarcos.model.entity.Pizza;
 import com.example.proyectomarcos.repository.IDetPizza;
+import com.example.proyectomarcos.repository.IPizza;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,9 @@ public class DetPizzaService {
 
     @Autowired
     private IDetPizza IDetPizza;
+
+    @Autowired
+    private IPizza IPizza;
 
     public List<DetPizza> getAllDetPizza() {
         return IDetPizza.findAll();
@@ -28,6 +33,22 @@ public class DetPizzaService {
 
     public void deleteById(Integer id) {
         IDetPizza.deleteById(id);
+    }
+
+
+    public Integer verificarPizza(Pizza pizza) {
+        List<Pizza> lista = IPizza.findAll();
+        for (Pizza p : lista) {
+            if (p.getIngrediente().equals(pizza.getIngrediente()) &&
+                    p.getCarne().equals(pizza.getCarne()) &&
+                    p.getMasa().equals(pizza.getMasa()) &&
+                    p.getSalsa().equals(pizza.getSalsa()) &&
+                    p.getQueso().equals(pizza.getQueso()) &&
+                    p.getTamano().equals(pizza.getTamano())) {
+                return p.getId();
+            }
+        }
+        return null;
     }
 
 }

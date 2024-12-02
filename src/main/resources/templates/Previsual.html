@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1  0">
@@ -20,7 +20,7 @@
     <title>Pizzeria Pizza</title>
 </head>
 <body>
-<header th:replace="layout/header :: header"></header>
+<header th:replace="layout/Nav :: header"></header>
 
 <main>
 
@@ -54,9 +54,9 @@
             <button type="submit">Agregar más</button>
         </form>
         <form th:action="@{/comprar/borrarLista}" method="post" style="display:inline;">
-                <button type="submit">Vaciar pedido</button>
+            <button type="submit">Vaciar pedido</button>
         </form>
-        <form style="display:inline;">
+        <form th:action="@{/comprar/ordenar}" method="post" style="display:inline;">
             <button type="submit">Ordenar</button>
         </form>
     </div>

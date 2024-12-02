@@ -1,0 +1,23 @@
+<nav class="col-12 col-md-3 sidebar" th:fragment="Admin_Nav" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <h4>Panel de Ventas</h4>
+    <a class="nav-link"  th:href="@{/public/index}">
+        <i class="fas fa-home"></i> Inicio
+    </a>
+    <a class="nav-link"  th:href="@{/admin/dashboard}">
+        <i class="fa fa-tachometer"></i> Dashboard
+    </a>
+    <a class="nav-link"  th:href="@{/admin/adminMoni}">
+        <i class="fas fa-pizza-slice"></i> Ordenes
+    </a>
+    <a class="nav-link"  href="#">
+        <i class="fas fa-chart-line"></i> Reportes de Ventas
+    </a>
+    <a class="nav-link"  th:href="@{/admin/empleado}">
+        <i class="fa fa-id-card"></i> Empleado
+    </a>
+
+    <!-- Logotipo dentro del Sidebar, al final en modo vertical -->
+    <div class="logotipo-container">
+        <img src="/img/favicon.png" alt="Logotipo" class="img-fluid logotipo">
+    </div>
+</nav>

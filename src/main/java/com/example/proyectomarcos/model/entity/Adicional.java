@@ -12,10 +12,16 @@ public class Adicional {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "descripcion", nullable = false)
+    @Column(name = "descripcion")
     private String descripcion;
 
-    @Column(name = "precio", nullable = false)
-    private double precio;
+    @Column(name = "categoria")
+    private String categoria;
+
+    @Column(name = "url_imagen")
+    private String url_imagen;
+
+    @Column(name = "precio")
+    private Double precio;
 
 }

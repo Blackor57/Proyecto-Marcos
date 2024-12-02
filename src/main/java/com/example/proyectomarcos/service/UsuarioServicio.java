@@ -8,5 +8,7 @@ public interface UsuarioServicio extends UserDetailsService {
 
     public Usuario save(UsuarioRegistroDTO registroDTO);
 
+    Usuario saveAdmin(UsuarioRegistroDTO registroDTO);
+
     Usuario buscarPorEmail(String email);
 }

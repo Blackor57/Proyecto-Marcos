@@ -1,7 +1,7 @@
 <header th:fragment="header" xmlns:sec="http://www.w3.org/1999/xhtml">
     <nav class="navbar navbar-expand-lg navbar-light bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand logo-text" th:href="@{/index}">
+            <a class="navbar-brand logo-text" th:href="@{/public/index}">
                 <img src="/img/favicon.png" alt="" width="50" height="50" class="d-inline-block align-text-top">
                 &nbsp Pizzeria
             </a>
@@ -16,10 +16,10 @@
                         <a class="nav-link" th:href="@{/about}">Menú</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/order}">Monitoreo</a>
+                        <a class="nav-link" th:href="@{/public/order}">Monitoreo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/rewards}">Rewards</a>
+                        <a class="nav-link" th:href="@{/public/rewards}">Rewards</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/comprar}">Ordena YA</a>
@@ -27,8 +27,11 @@
                     <li class="nav-item" sec:authorize="!isAuthenticated()">
                         <a class="nav-link" th:href="@{/registro}">Ingresar</a>
                     </li>
-                    <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <li class="nav-item" sec:authorize="hasRole('ROLE_USER')">
                         <a class="nav-link" th:href="@{/perfil}">Perfil</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')">
+                        <a class="nav-link" th:href="@{/admin/dashboard}">DashBoard</a>
                     </li>
                     <li class="nav-item" sec:authorize="isAuthenticated()">
                         <a class="nav-link" th:href="@{/logout}">Logout</a>

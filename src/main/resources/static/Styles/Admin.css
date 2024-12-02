@@ -1,0 +1,74 @@
+.perfil-container  {
+    font-family: "Teachers", 'Times New Roman', Times, serif;
+    text-align: center !important;
+    max-width: 600px !important; /* Ancho máximo del contenedor */
+    max-height: 600px !important; /* Altura máxima para hacer que el contenedor sea cuadrado */
+    margin: 40px auto 0 !important; /* Margen superior de 30px y centrado horizontal */
+    padding: 30px !important; /* Espacio interno */
+    border-radius: 15px !important; /* Bordes redondeados */
+    background-color: #ffffff !important; /* Color de fondo */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) !important;
+    aspect-ratio: 1 !important; /* Mantener una relación de aspecto cuadrada */
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center; /* Centra el título */
+    color: #000000;
+    margin-bottom: 20px; /* Espacio entre el título y la foto */
+}
+
+
+.foto-container {
+    text-align: center
+    /* Centra la imagen */
+}
+
+.detalle-container {
+    margin-top: 20px; /* Espacio entre la imagen y los detalles */
+}
+
+.xdd {
+    text-align: left; /* Alinea el contenido de los detalles a la izquierda */
+}
+
+/* Estilos específicos para la lista de perfil */
+.perfil-lista {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: capitalize;
+    list-style-type: none;
+    padding: 0;
+}
+
+.perfil-item {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el texto en negrita en la sección de perfil */
+.perfil-item strong {
+    font-weight: bold;
+}
+
+.foto-container img {
+    max-width: 30%; /* Ajusta el ancho máximo de la imagen al contenedor */
+    height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.nombre-container {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.nombre {
+    margin: 50px auto 0; /* Margen superior de 50px */
+    font-size: 30px;
+    color: var(--bg-color-dark);
+    font-weight: bold; /* Negrita */
+}
+
+.foto-container {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el nombre y la foto */
+}
