@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Ventas - Pizzería</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/Styles/adminestilo.css}">
+  <link rel="stylesheet" th:href="@{/Styles/ordenes.css}">
+  <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body>
+<div class="container-fluid">
+  <div class="row flex-nowrap"> <!-- Flexbox para garantizar que sidebar y main estén en fila -->
+    <!-- Sidebar -->
+    <nav th:replace="layout/Nav_Admin"></nav>
+
+    <!-- Main content -->
+    <main class="col-12 col-md-9 main-content">
+      <section class="status__container">
+        <div>
+          <h2>Pizzas Preparando</h2>
+          <div class="list__container">
+            <div class="list__item" th:each="pizza : ${preparandoList}">
+              <div>
+                <p><b>Código:</b> <span th:text="${pizza.getId()}"></span></p>
+                <p><b>Nombre:</b> <span th:text="${pizza.getOrden().getNombre()}"></span></p>
+                <p><b>Tamaño:</b> <span th:text="${pizza.getPizza().getTamano()}"></span></p>
+              </div>
+              <div style="display: flex; flex-direction: column">
+                <form th:action="@{/admin/adminMoni/ver/{id}(id=${pizza.getId()})}" method="get" style="display:inline;">
+                  <button type="submit">Ver</button>
+                </form>
+                <form th:action="@{/admin/adminMoni/EnHorno/{id}(id=${pizza.getId()})}" method="post" style="display:inline;">
+                  <button type="submit">Completar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2>Pizza En Horno</h2>
+          <div class="list__container">
+            <div class="list__item" th:each="pizza : ${hornoList}">
+              <div>
+                <p><b>Código:</b> <span th:text="${pizza.getId()}"></span></p>
+                <p><b>Nombre:</b> <span th:text="${pizza.getOrden().getNombre()}"></span></p>
+                <p><b>Tamaño:</b> <span th:text="${pizza.getPizza().getTamano()}"></span></p>
+              </div>
+              <div style="display: flex; flex-direction: column">
+                <form th:action="@{/admin/adminMoni/ver/{id}(id=${pizza.getId()})}" method="get" style="display:inline;">
+                  <button type="submit">Ver</button>
+                </form>
+                <form th:action="@{/admin/adminMoni/Terminado/{id}(id=${pizza.getId()})}" method="post" style="display:inline;">
+                  <button type="submit">Completar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2>Pizzas Terminadas</h2>
+          <div class="list__container">
+            <div class="list__item" th:each="pizza : ${terminadoList}">
+              <div>
+                <p><b>Código:</b> <span th:text="${pizza.getId()}"></span></p>
+                <p><b>Nombre:</b> <span th:text="${pizza.getOrden().getNombre()}"></span></p>
+                <p><b>Tamaño:</b> <span th:text="${pizza.getPizza().getTamano()}"></span></p>
+              </div>
+              <div style="display: flex; flex-direction: column">
+                <form th:action="@{/admin/adminMoni/ver/{id}(id=${pizza.getId()})}" method="get" style="display:inline;">
+                  <button type="submit">Ver</button>
+                </form>
+                <form th:action="@{/admin/adminMoni/Entregado/{id}(id=${pizza.getId()})}" method="post" style="display:inline;">
+                  <button type="submit">Completar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section th:if="${pizzaVisible != null}">
+          <h3>Datos de la Pizza</h3>
+          <div>
+            <p><b>Código:</b> <span th:text="${pizzaVisible.getId()}"></span></p>
+            <p><b>Nombre:</b> <span th:text="${pizzaVisible.getOrden().getNombre()}"></span></p>
+            <p><b>Tamaño:</b> <span th:text="${pizzaVisible.getPizza().getTamano()}"></span></p>
+            <p><b>Salsa:</b> <span th:text="${pizzaVisible.getPizza().getSalsa()}"></span></p>
+            <p><b>Queso:</b> <span th:text="${pizzaVisible.getPizza().getQueso()}"></span></p>
+            <p><b>Masa:</b> <span th:text="${pizzaVisible.getPizza().getMasa()}"></span></p>
+          </div>
+          <div>
+            <p>Carnes:</p>
+            <p><b>Molida:</b> <span th:text="${pizzaVisible.getPizza().getCarne().getMolida() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Pollo:</b> <span th:text="${pizzaVisible.getPizza().getCarne().getPollo() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Jamon:</b> <span th:text="${pizzaVisible.getPizza().getCarne().getJamon() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Tocino:</b> <span th:text="${pizzaVisible.getPizza().getCarne().getTocino() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Pepperoni:</b> <span th:text="${pizzaVisible.getPizza().getCarne().getPepperoni() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Italiana:</b> <span th:text="${pizzaVisible.getPizza().getCarne().getItaliana() == 1 ? 'Sí' : 'No'}"></span></p>
+          </div>
+          <div>
+            <p>Ingredientes:</p>
+            <p><b>Cebolla:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getCebolla() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Champiñon:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getChampinon() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Aceituna:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getAceituna() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Pimiento:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getPimiento() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Piña:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getPina() == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Cheddar:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getCheddar() == 1 ? 'Sí' : 'No'}"></span></p>
+          </div>
+        </section>
+    </main>
+  </div>
+</div>
+
+<script th:src="@{JavaScript/ordenes.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{JavaScript/admin.js}"></script> <!-- Enlazamos el archivo JS -->
+</body>
+</html>
