@@ -1,14 +1,14 @@
-.perfil-container  {
-    font-family: "Teachers", 'Times New Roman', Times, serif;
-    text-align: center !important;
-    max-width: 600px !important; /* Ancho máximo del contenedor */
-    max-height: 600px !important; /* Altura máxima para hacer que el contenedor sea cuadrado */
-    margin: 40px auto 0 !important; /* Margen superior de 30px y centrado horizontal */
-    padding: 30px !important; /* Espacio interno */
-    border-radius: 15px !important; /* Bordes redondeados */
-    background-color: #ffffff !important; /* Color de fondo */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5) !important;
-    aspect-ratio: 1 !important; /* Mantener una relación de aspecto cuadrada */
+.perfil-container {
+    text-align: center;
+    max-width: 35%; /* Ajusta para pantallas más pequeñas */
+    margin: 20px auto;
+    padding: 20px; /* Reduce el padding interno */
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    aspect-ratio: auto; /* Permite una altura dinámica según el contenido */
+    width: 100%; /* Asegúrate de que respete el contenedor */
+    height: 30%;
 }
 
 h1 {
@@ -20,12 +20,13 @@ h1 {
 
 
 .foto-container {
-    text-align: center
-    /* Centra la imagen */
+    text-align: center;
 }
 
+
 .detalle-container {
-    margin-top: 20px; /* Espacio entre la imagen y los detalles */
+    margin-top: 20px;
+    font-size: 14px; /* Reduce ligeramente el tamaño de fuente */
 }
 
 .xdd {
@@ -34,16 +35,14 @@ h1 {
 
 /* Estilos específicos para la lista de perfil */
 .perfil-lista {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-transform: capitalize;
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .perfil-item {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espacio entre los ítems */
+    font-size: 16px; /* Ajusta el tamaño del texto */
 }
 
 /* Estilo para el texto en negrita en la sección de perfil */
@@ -52,8 +51,10 @@ h1 {
 }
 
 .foto-container img {
-    max-width: 30%; /* Ajusta el ancho máximo de la imagen al contenedor */
-    height: auto; /* Mantiene la proporción de aspecto */
+    max-width: 150px; /* Tamaño máximo fijo para la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 50%; /* Hace la imagen redonda */
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
 }
 
 .nombre-container {

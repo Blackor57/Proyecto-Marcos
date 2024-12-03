@@ -33,7 +33,6 @@ public class PublicController {
     }
 
     @GetMapping("order")
-
     public String order(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String email = authentication.getName();

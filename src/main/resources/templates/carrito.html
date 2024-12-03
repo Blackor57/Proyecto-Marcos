@@ -43,166 +43,40 @@
             <!--/////////////////////////////////////////////////////////////////
             ////////////////////////BEBIDA///////////////////////////////////////
             /////////////////////////////////////////////////////////////////////-->
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Chicha Morada</span>
-                <img src="https://i.pinimg.com/564x/33/58/f2/3358f246baa9a431107f6136b51cf7d6.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 8,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
+            <div class="item"
+                 th:each="bebida : ${listBebida}"
+                 th:data-categoria="${bebida.categoria}">
+                <span class="titulo-item" th:text="${bebida.descripcion}">Nombre del producto</span>
+                <img th:src="${bebida.url_imagen}" alt="" class="img-item">
+                <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(bebida.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
+                <form th:action="@{/comprar/agregarProducto/{id}(id=${bebida.getId()})}" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-sm btn-primary">Ver</button>
+                </form>
             </div>
 
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Inca Kola</span>
-                <img src="https://i.pinimg.com/236x/4d/60/66/4d6066225e3b89f4c05e751cfa1710fd.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 5,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Coca-Cola</span>
-                <img src="https://pizzapub.com.mx/cdn/shop/products/coca_resize_800x.png?v=1620069609" alt="" class="img-item">
-                <span class="precio-item">S/. 5,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
+            <div class="item"
+                 th:each="vino : ${listVino}"
+                 th:data-categoria="${vino.categoria}">
+                <span class="titulo-item" th:text="${vino.descripcion}">Nombre del producto</span>
+                <img th:src="${vino.url_imagen}" alt="" class="img-item">
+                <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(vino.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
+                <form th:action="@{/comprar/agregarProducto/{id}(id=${vino.getId()})}" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-sm btn-primary">Ver</button>
+                </form>
             </div>
 
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Jugo de Piña</span>
-                <img src="https://i.pinimg.com/564x/00/a3/48/00a34855d6a5a1ce2146292080a0b07f.jpg" alt="Nombre del Producto" class="img-item">
-                <span class="precio-item">S/. 10,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Birra Moretti</span>
-                <img src="https://i.pinimg.com/564x/35/2b/e3/352be3973c3a1f6b88290348b33c30df.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 12,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Caffè Italiano </span>
-                <img src="https://i.pinimg.com/564x/af/79/70/af7970c40ba167cffcdfb61fe37fc0d6.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 6,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
+            <div class="item"
+                 th:each="coctel : ${listCoctel}"
+                 th:data-categoria="${coctel.categoria}">
+                <span class="titulo-item" th:text="${coctel.descripcion}">Nombre del producto</span>
+                <img th:src="${coctel.url_imagen}" alt="" class="img-item">
+                <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(coctel.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
+                <form th:action="@{/comprar/agregarProducto/{id}(id=${coctel.getId()})}" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-sm btn-primary">Ver</button>
+                </form>
             </div>
 
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Té de Hierbas Peruano </span>
-                <img src="https://i.pinimg.com/564x/23/11/42/23114224a200080f8a814d8ed4bba0c3.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 5,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Chocolate Caliente Peruano </span>
-                <img src="https://i.pinimg.com/564x/72/43/4a/72434a3440feabf6b2624defd677a46d.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 12,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
 
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Café con Leche</span>
-                <img src="https://i.pinimg.com/564x/95/c0/fa/95c0fa7eaadd18a4697bc6ede9f61a01.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 8,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Tè al Limone (Té al Limón Italiano)</span>
-                <img src="https://i.pinimg.com/564x/ae/52/be/ae52be625480cf797a8acb2609f7a1ab.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 7,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Jugo de Maracuyá</span>
-                <img src="https://i.pinimg.com/564x/58/c6/7c/58c67c336cb55f733e7f286c81ccdfe9.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 8,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Jugo de Lúcuma</span>
-                <img src="https://i.pinimg.com/564x/ba/1f/b8/ba1fb85c22b62868675734052dbdcfa3.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 10,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Jugo de Naranja Natural</span>
-                <img src="https://i.pinimg.com/564x/10/41/10/104110ea581a35aff9694906256f3410.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 7,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Jugo Verde Detox</span>
-                <img src="https://i.pinimg.com/736x/80/c3/7c/80c37c4751d6a473e11c151e0b10dbeb.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 9,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="bebida">
-                <span class="titulo-item">Succo di Pera (Jugo de Pera Italiano)</span>
-                <img src="https://i.pinimg.com/564x/2c/9d/c2/2c9dc228730b0f7d7654e9ff37205704.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 15,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="vino">
-                <span class="titulo-item">Vino Tinto Tacama</span>
-                <img src="https://www.tacama.com/wp-content/uploads/2023/11/SEMISECODELAVINAWEBT.png" alt="" class="img-item">
-                <span class="precio-item">S/. 30,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="vino">
-                <span class="titulo-item">Vino Blanco Tabali</span>
-                <img src="https://tienda.tabali.com/241-large_default/vetas-blancas-chardonnay.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 30,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="vino">
-                <span class="titulo-item">Chianti Classico</span>
-                <img src="https://virtute.pe/wp-content/uploads/2023/09/vino-italiano-tinto-chianti-classico-castelgreve-riserva-docg-castelli-del-grevepesa.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 40,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="vino">
-                <span class="titulo-item">Malbec Argentino</span>
-                <img src="https://lacanasteria.com/wp-content/uploads/2023/05/vino-catena-zapata-malbec-argentino.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 40,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="vino">
-                <span class="titulo-item">Vino Rosado Italiano (Chiaretto) </span>
-                <img src="https://virtute.pe/wp-content/uploads/2023/09/vino-italiano-rosado-chiaretto-doc-aldegheri.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 30,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="coctel">
-                <span class="titulo-item">Pisco Sour</span>
-                <img src="https://www.record.com.pe/wp-content/uploads/2021/07/Pisco-Sour-1.png" alt="" class="img-item">
-                <span class="precio-item">S/. 15,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="coctel">
-                <span class="titulo-item">Aperol Spritz</span>
-                <img src="https://i.pinimg.com/564x/3f/07/2f/3f072f390b105eb0c17c7503817a986f.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 20,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="coctel">
-                <span class="titulo-item">Mojito Peruano</span>
-                <img src="https://i.pinimg.com/564x/a5/0b/b2/a50bb22f5cc8d62438679d15f335c05c.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 15,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="coctel">
-                <span class="titulo-item">Bellini Italiano</span>
-                <img src="https://i.pinimg.com/564x/77/42/8d/77428d63d418ab8a0c2d6344de8e41e4.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 25,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="coctel">
-                <span class="titulo-item">Negroni Italiano</span>
-                <img src="https://i.pinimg.com/564x/46/5c/5d/465c5dce4c630d77d363b98647085427.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 25,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
 
             <!--/////////////////////////////////////////////
                 //////////////////////PIZZA///////////////////
@@ -373,171 +247,54 @@
                         /////////////////////////////////-->
 
 
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Tiramisu</span>
-                <img src="https://i.pinimg.com/564x/39/90/7c/39907cfb16ebfa54268cd9a99f209779.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 15,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
+            <div class="item"
+                 th:each="postre : ${listPostre}"
+                 th:data-categoria="${postre.categoria}">
+                <span class="titulo-item" th:text="${postre.descripcion}">Nombre del producto</span>
+                <img th:src="${postre.url_imagen}" alt="" class="img-item">
+                <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(postre.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
+                <form th:action="@{/comprar/agregarProducto/{id}(id=${postre.getId()})}" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-sm btn-primary">Ver</button>
+                </form>
             </div>
 
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Helado Artesanal Peruano</span>
-                <img src="https://i.pinimg.com/564x/fb/e6/62/fbe662ff9190a3af6cd7c80869fab673.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 10,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Brownie con Helado</span>
-                <img src="https://i.pinimg.com/enabled/564x/fe/b8/7e/feb87e50a295b14e4ceba2feb68df8b9.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 18,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Suspiro a la Limeña</span>
-                <img src="https://i.pinimg.com/564x/bf/31/5a/bf315a7cc9a5ae762e51de543d3321f5.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 12,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Panna Cotta</span>
-                <img src="https://i.pinimg.com/736x/aa/0c/a3/aa0ca3a1bfacb220fbd4e059cc19a293.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 15,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Cheesecake de Lúcuma</span>
-                <img src="https://i.pinimg.com/736x/24/53/23/24532338ab1c080825bf9f2fa46323e8.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 18,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Flan Casero</span>
-                <img src="https://i.pinimg.com/564x/40/63/80/4063808acec90f8174c4efad2cb10df9.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 10,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Mousse de Chocolate</span>
-                <img src="https://i.pinimg.com/564x/af/8c/85/af8c8584bf75093bf03c2aeeb8b2e5ea.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 12,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Tarta de Manzana Italiana</span>
-                <img src="https://i.pinimg.com/564x/d1/6c/82/d16c8233d0523060e5a29c0a35ea2985.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 15,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="postre">
-                <span class="titulo-item">Gelato Italiano</span>
-                <img src="https://i.pinimg.com/enabled/564x/12/24/75/12247503d95991627de8320ba20e2b01.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 10,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
 
             <!--///////////////////////////////
             //////////////UTENSILIOS///////////
             ///////////////////////////////////-->
 
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Cuchillo Chef</span>
-                <img src="https://www.plazachef.com/cdn/shop/files/3_d7422169-2ceb-4c52-9113-90685ddd4914.png?v=1716917491&width=600" alt="" class="img-item">
-                <span class="precio-item">S/. 50,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
+            <div class="item"
+                 th:each="utensilio : ${listUtensilio}"
+                 th:data-categoria="${utensilio.categoria}">
+                <span class="titulo-item" th:text="${utensilio.descripcion}">Nombre del producto</span>
+                <img th:src="${utensilio.url_imagen}" alt="" class="img-item">
+                <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(utensilio.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
+                <form th:action="@{/comprar/agregarProducto/{id}(id=${utensilio.getId()})}" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-sm btn-primary">Ver</button>
+                </form>
             </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Tabla de Cortar</span>
-                <img src="https://dcocina.pe/wp-content/uploads/2024/01/CS74791502-1-600x600.png" alt="" class="img-item">
-                <span class="precio-item">S/. 25,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Espátula de Silicona</span>
-                <img src="https://i.pinimg.com/736x/88/72/89/887289f2d81ba19e96041515cfd303d5.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 15,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Rallador Multiusos</span>
-                <img src="https://www.plazachef.com/cdn/shop/products/Ralladorverde.jpg?v=1717021247&width=600" alt="" class="img-item">
-                <span class="precio-item">S/. 20,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Sartén Antiadherente</span>
-                <img src="https://i.pinimg.com/736x/55/25/99/552599a34d5d8861e28af081e59494a0.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 80,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Batidora de Mano</span>
-                <img src="https://i.pinimg.com/564x/aa/ea/b6/aaeab62d993c71ec228dcfa1cc88b1b7.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 70,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Cernidor de Harina</span>
-                <img src="https://i.pinimg.com/564x/43/bb/21/43bb212f1b490f01c9a3a5eb1006ab22.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 10,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Tijeras de Cocina</span>
-                <img src="https://i.pinimg.com/564x/cf/44/6d/cf446d59bcca32e0bcf9f2cb5a76037c.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 15,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Colador de Acero Inoxidable</span>
-                <img src="https://i.pinimg.com/564x/f2/6a/cf/f26acfd4076c690f192e007d45b43c7f.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 30,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-            <div class="item" data-categoria="utensilio">
-                <span class="titulo-item">Molde para Pizza</span>
-                <img src="https://dcocina.pe/wp-content/uploads/2022/01/SK20228000060-01.jpg" alt="" class="img-item">
-                <span class="precio-item">S/. 40,00</span>
-                <button class="boton-item">Añadir a la Orden</button>
-            </div>
-
-
 
 
         </div>
-        <!-- Carrito de Compras -->
-        <div class="carrito" id="carrito">
-            <div class="header-carrito">
-                <h2>Tu Orden</h2>
-            </div>
+<!--        &lt;!&ndash; Carrito de Compras &ndash;&gt;-->
+<!--        <div class="carrito" id="carrito">-->
+<!--            <div class="header-carrito">-->
+<!--                <h2>Tu Orden</h2>-->
+<!--            </div>-->
 
-            <div class="carrito-items">
+<!--            <div class="carrito-items">-->
 
-            </div>
-            <div class="carrito-total">
-                <div class="fila">
-                    <strong>Tu Total</strong>
-                    <span class="carrito-precio-total">
-                        $120.000,00
-                    </span>
-                </div>
-                <button class="btn-pagar">Realizar Pedido <i class="fa-solid fa-bag-shopping"></i> </button>
-            </div>
-        </div>
+<!--            </div>-->
+<!--            <div class="carrito-total">-->
+<!--                <div class="fila">-->
+<!--                    <strong>Tu Total</strong>-->
+<!--                    <span class="carrito-precio-total">-->
+<!--                        $0-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--                <button class="btn-pagar">Realizar Pedido <i class="fa-solid fa-bag-shopping"></i> </button>-->
+<!--            </div>-->
+<!--        </div>-->
     </section>
 
     <script src="app.js"></script>

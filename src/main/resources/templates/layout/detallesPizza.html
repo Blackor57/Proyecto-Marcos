@@ -1,0 +1,33 @@
+<div th:fragment="detalles">
+    <div th:if="${pizzaVisible != null}">
+        <div>
+            <p><b>Código:</b> <span th:text="${pizzaVisible.id}"></span></p>
+            <p><b>Nombre:</b> <span th:text="${pizzaVisible.orden.nombre}"></span></p>
+            <p><b>Tamaño:</b> <span th:text="${pizzaVisible.pizza.tamano}"></span></p>
+            <p><b>Salsa:</b> <span th:text="${pizzaVisible.pizza.salsa}"></span></p>
+            <p><b>Queso:</b> <span th:text="${pizzaVisible.pizza.queso}"></span></p>
+            <p><b>Masa:</b> <span th:text="${pizzaVisible.pizza.masa}"></span></p>
+        </div>
+        <div>
+            <h4>Carnes</h4>
+            <p><b>Molida:</b> <span th:text="${pizzaVisible.pizza.carne.molida == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Pollo:</b> <span th:text="${pizzaVisible.pizza.carne.pollo == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Jamón:</b> <span th:text="${pizzaVisible.pizza.carne.jamon == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Tocino:</b> <span th:text="${pizzaVisible.pizza.carne.tocino == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Pepperoni:</b> <span th:text="${pizzaVisible.pizza.carne.pepperoni == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Italiana:</b> <span th:text="${pizzaVisible.pizza.carne.italiana == 1 ? 'Sí' : 'No'}"></span></p>
+        </div>
+        <div>
+            <h4>Ingredientes</h4>
+            <p><b>Cebolla:</b> <span th:text="${pizzaVisible.pizza.ingrediente.cebolla == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Champiñón:</b> <span th:text="${pizzaVisible.pizza.ingrediente.champinon == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Aceituna:</b> <span th:text="${pizzaVisible.pizza.ingrediente.aceituna == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Pimiento:</b> <span th:text="${pizzaVisible.pizza.ingrediente.pimiento == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Piña:</b> <span th:text="${pizzaVisible.pizza.ingrediente.pina == 1 ? 'Sí' : 'No'}"></span></p>
+            <p><b>Cheddar:</b> <span th:text="${pizzaVisible.pizza.ingrediente.cheddar == 1 ? 'Sí' : 'No'}"></span></p>
+        </div>
+    </div>
+    <div th:if="${pizzaVisible == null}">
+        <p>No hay detalles disponibles para esta pizza.</p>
+    </div>
+</div>

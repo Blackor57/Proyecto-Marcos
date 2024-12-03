@@ -26,7 +26,7 @@
 
     <section class="status__container">
         <div>
-            <h3>Agregadas</h3>
+            <h3>Pizzas Agregadas</h3>
             <div class="list__container" id="list1">
                 <div th:each="pizza : ${listaPizzas}" class="list__item" draggable="true">
                     <img src="/img/pizzaItem.jpeg" alt="Pizza Imagen" draggable="false">
@@ -40,9 +40,15 @@
             </div>
         </div>
         <div>
-            <h3>Ordenadas</h3>
+            <h3>Productos Adicionales</h3>
             <div class="list__container" id="list2">
-
+                <div th:each="adi : ${listaAdi}" class="list__item" draggable="true">
+                    <img th:src="@{adi.url_imagen}" alt="Pizza Imagen" draggable="false">
+                    <div>
+                        <p><b>Producto:</b><br th:text="${adi.descripcion}"></p>
+                        <p><b>Categoría:</b><br th:text="${adi.categoria}"></p>
+                    </div>
+                </div>
             </div>
         </div>
 

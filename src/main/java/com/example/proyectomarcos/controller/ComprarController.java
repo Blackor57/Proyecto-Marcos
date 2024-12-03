@@ -1,6 +1,7 @@
 package com.example.proyectomarcos.controller;
 
 import com.example.proyectomarcos.model.entity.*;
+import com.example.proyectomarcos.repository.IAdicional;
 import com.example.proyectomarcos.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +34,8 @@ public class ComprarController {
     private AdicionalService adicionalService;
     @Autowired
     private DetAdicionalService detAdicionalService;
+    @Autowired
+    private IAdicional adiRepo;
     
     @ModelAttribute("listaPizzas")
     public List<Pizza> listaPizzas() {
@@ -43,14 +46,29 @@ public class ComprarController {
     
     
     @GetMapping("")
-    public String comprar() {
+    public String comprar(Model model) {
+
+        List<Adicional> listBebida = adiRepo.findAdicionalesByCategoria("bebida");
+        List<Adicional> listVino = adiRepo.findAdicionalesByCategoria("vino");
+        List<Adicional> listCoctel = adiRepo.findAdicionalesByCategoria("coctel");
+        List<Adicional> listPostre = adiRepo.findAdicionalesByCategoria("postre");
+        List<Adicional> listUtensilio = adiRepo.findAdicionalesByCategoria("utensilio");
+
+        model.addAttribute("listBebida", listBebida);
+        model.addAttribute("listVino", listVino);
+        model.addAttribute("listCoctel", listCoctel);
+        model.addAttribute("listPostre", listPostre);
+        model.addAttribute("listUtensilio", listUtensilio);
+
         return "carrito";
     }
 
     @GetMapping("/previsual")
     public String previsual(Model model,
-                            @ModelAttribute("listaPizzas") List<Pizza> listaPizzas) {
+                            @ModelAttribute("listaPizzas") List<Pizza> listaPizzas,
+                            @ModelAttribute("listaAdi") List<Adicional> listaAdi) {
         model.addAttribute("listaPizzas", listaPizzas);
+        model.addAttribute("listaAdi", listaAdi);
         return "previsual";
     }
 
@@ -118,10 +136,16 @@ public class ComprarController {
     }
 
     @PostMapping("/agregarProducto/{id}")
-    public void agregarProducto(@ModelAttribute("listaAdi") List<Adicional> listaAdicionales,
-                                @PathVariable Integer id){
+    public String agregarProducto(@ModelAttribute("listaAdi") List<Adicional> listaAdicionales,
+                                  @ModelAttribute("listaPizzas") List<Pizza> listaPizzas,
+                                  @PathVariable Integer id,
+                                  Model model){
         Adicional adi = adicionalService.getAdicional(id).get();
         listaAdicionales.add(adi);
+
+        model.addAttribute("listaPizzas", listaPizzas);
+        model.addAttribute("listaAdi", listaAdicionales);
+        return "previsual";
     }
 
 
