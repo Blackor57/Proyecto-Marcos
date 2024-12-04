@@ -35,4 +35,14 @@ public class PerfilControlador {
         model.addAttribute("usuario", usuario);
         return "empleado";
     }
+
+    @GetMapping("/cooker/cocinero")
+    @PreAuthorize("hasRole('ROLE_COOKER')")
+    public String verCocinero(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String email = authentication.getName();
+        Usuario usuario = usuarioServicio.buscarPorEmail(email);
+        model.addAttribute("usuario", usuario);
+        return "cocinero";
+    }
 }

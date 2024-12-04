@@ -1,9 +1,6 @@
 package com.example.proyectomarcos.service;
 
-import com.example.proyectomarcos.model.entity.DetPizza;
-import com.example.proyectomarcos.model.entity.Ingrediente;
-import com.example.proyectomarcos.model.entity.Orden;
-import com.example.proyectomarcos.model.entity.Pizza;
+import com.example.proyectomarcos.model.entity.*;
 import com.example.proyectomarcos.repository.IDetPizza;
 import com.example.proyectomarcos.repository.IOrden;
 import com.example.proyectomarcos.repository.IPizza;
@@ -49,5 +46,6 @@ public class OrdenService {
         detPizza.setEstado("Preparando");
         IDetPizza.save(detPizza);
     }
+
 
 }

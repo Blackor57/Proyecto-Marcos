@@ -44,6 +44,9 @@ public class Usuario {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Column(name = "star")
+    private String star;
+
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "usuarios_roles",
             joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),

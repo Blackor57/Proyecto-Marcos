@@ -42,6 +42,7 @@ public class SecurityConfiguration {
                                 "/Styles/**", "/img/**").permitAll()
                         .requestMatchers("/perfil").authenticated()
                         .requestMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/cooker/**").hasAuthority("ROLE_COOK")
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form

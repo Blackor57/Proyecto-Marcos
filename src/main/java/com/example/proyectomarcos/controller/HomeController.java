@@ -1,6 +1,8 @@
 package com.example.proyectomarcos.controller;
 
+import com.example.proyectomarcos.model.entity.DetAdicional;
 import com.example.proyectomarcos.model.entity.DetPizza;
+import com.example.proyectomarcos.repository.IDetAdicional;
 import com.example.proyectomarcos.repository.IDetPizza;
 import com.example.proyectomarcos.service.DetPizzaService;
 import lombok.RequiredArgsConstructor;
@@ -17,10 +19,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class HomeController {
 
-    @Autowired
-    IDetPizza iDetPizza;
-    @Autowired
-    private DetPizzaService detPizzaService;
 
     @GetMapping("/dashboard")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
@@ -28,42 +26,5 @@ public class HomeController {
         return "dashboard";
     }
 
-    @GetMapping("/adminMoni")
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
-    public String adminMoni(Model model) {
-        List<DetPizza> terminados = iDetPizza.findAllByEstadoTerminado();
-        List<DetPizza> enHorno = iDetPizza.findAllByEstadoEnHorno();
-        List<DetPizza> preparando = iDetPizza.findAllByEstadoPreparando();
-
-        model.addAttribute("terminadoList",terminados);
-        model.addAttribute("hornoList",enHorno);
-        model.addAttribute("preparandoList",preparando);
-
-        return "monitoreo";
-    }
-
-   @GetMapping("/adminMoni/ver/{id}")
-    public String verPizza(Model model, @PathVariable Integer id) {
-        DetPizza visualizar = iDetPizza.getById(id);  // Cargar la pizza por id
-        List<DetPizza> terminados = iDetPizza.findAllByEstadoTerminado();
-        List<DetPizza> enHorno = iDetPizza.findAllByEstadoEnHorno();
-        List<DetPizza> preparando = iDetPizza.findAllByEstadoPreparando();
-
-        model.addAttribute("terminadoList", terminados);
-        model.addAttribute("hornoList", enHorno);
-        model.addAttribute("preparandoList", preparando);
-        model.addAttribute("pizzaVisible", visualizar);  // Aquí es donde pasas la pizzaVisible al modelo
-
-        return "monitoreo";  // Asegúrate de que este es el nombre correcto de tu vista
-    }
-
-    @PostMapping("/adminMoni/{estado}/{id}")
-    public String cambiarEstado(Model model, @PathVariable Integer id, @PathVariable String estado) {
-        DetPizza manejable = iDetPizza.getById(id);
-        manejable.setEstado(estado);
-        iDetPizza.save(manejable);
-
-        return "redirect:/admin/adminMoni";
-    }
 
 }

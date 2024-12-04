@@ -38,10 +38,10 @@
                                 <td th:text="${pizza.orden.nombre}"></td>
                                 <td th:text="${pizza.pizza.tamano}"></td>
                                 <td>
-                                    <form th:action="@{/admin/adminMoni/ver/{id}(id=${pizza.getId()})}" method="get" class="d-inline">
+                                    <form th:action="@{/cooker/adminMoni/ver/{id}/{idOrden}(id=${pizza.getId()},idOrden=${pizza.getOrden().getId()})}" method="get" class="d-inline">
                                         <button type="submit" class="btn btn-sm btn-primary">Ver</button>
                                     </form>
-                                    <form th:action="@{/admin/adminMoni/EnHorno/{id}(id=${pizza.id})}" method="post" class="d-inline">
+                                    <form th:action="@{/cooker/adminMoni/EnHorno/{id}(id=${pizza.id})}" method="post" class="d-inline">
                                         <button type="submit" class="btn btn-sm btn-success">Completar</button>
                                     </form>
                                 </td>
@@ -70,10 +70,10 @@
                                 <td th:text="${pizza.orden.nombre}"></td>
                                 <td th:text="${pizza.pizza.tamano}"></td>
                                 <td>
-                                    <form th:action="@{/admin/adminMoni/ver/{id}(id=${pizza.getId()})}" method="get" class="d-inline">
+                                    <form th:action="@{/cooker/adminMoni/ver/{id}/{idOrden}(id=${pizza.getId()},idOrden=${pizza.getOrden().getId()})}" method="get" class="d-inline">
                                         <button type="submit" class="btn btn-sm btn-primary">Ver</button>
                                     </form>
-                                    <form th:action="@{/admin/adminMoni/Terminado/{id}(id=${pizza.id})}" method="post" class="d-inline">
+                                    <form th:action="@{/cooker/adminMoni/Terminado/{id}(id=${pizza.id})}" method="post" class="d-inline">
                                         <button type="submit" class="btn btn-sm btn-success">Completar</button>
                                     </form>
                                 </td>
@@ -102,10 +102,10 @@
                                 <td th:text="${pizza.orden.nombre}"></td>
                                 <td th:text="${pizza.pizza.tamano}"></td>
                                 <td>
-                                    <form th:action="@{/admin/adminMoni/ver/{id}(id=${pizza.getId()})}" method="get" class="d-inline">
+                                    <form th:action="@{/cooker/adminMoni/ver/{id}/{idOrden}(id=${pizza.getId()},idOrden=${pizza.getOrden().getId()})}" method="get" class="d-inline">
                                         <button type="submit" class="btn btn-sm btn-primary">Ver</button>
                                     </form>
-                                    <form th:action="@{/admin/adminMoni/Entregado/{id}(id=${pizza.id})}" method="post" class="d-inline">
+                                    <form th:action="@{/cooker/adminMoni/Entregado/{id}(id=${pizza.id})}" method="post" class="d-inline">
                                         <button type="submit" class="btn btn-sm btn-success">Completar</button>
                                     </form>
                                 </td>
@@ -143,6 +143,13 @@
                             <p><b>Pimiento:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getPimiento() == '1' ? 'Sí' : 'No'}"></span></p>
                             <p><b>Piña:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getPina() == '1' ? 'Sí' : 'No'}"></span></p>
                             <p><b>Cheddar:</b> <span th:text="${pizzaVisible.getPizza().getIngrediente().getCheddar() == '1' ? 'Sí' : 'No'}"></span></p>
+                        </div>
+
+                        <div th:if="${detAdis != null}">
+                            <p>Adicionales:</p>
+                            <div th:each="adi : ${detAdis}">
+                                <p><b>Producto:</b> <span th:text="${adi.getAdicional().getDescripcion()}"></span></p>
+                            </div>
                         </div>
                     </section>
                 </aside>

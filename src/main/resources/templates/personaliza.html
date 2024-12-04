@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personalizar Pizza</title>
 
-    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css}"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!-- Estilos locales -->
-    <link rel="stylesheet" th:href="@{Styles/style-carrito.css}">
-    <link rel="stylesheet" th:href="@{/Styles/Styles.css}"/>
-    <link rel="stylesheet" th:href="@{/Styles/Bottoms.css}" />
-    <link rel="stylesheet" th:href="@{Styles/personaliza.css}"/>
-    <link th:href="@{https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap}" rel="stylesheet">
+    <link rel="stylesheet" href="/Styles/style-carrito.css">
+    <link rel="stylesheet" href="/Styles/Styles.css"/>
+    <link rel="stylesheet" href="/Styles/Bottoms.css" />
+    <link rel="stylesheet" href="/Styles/personaliza.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -27,36 +28,35 @@
 <body class="fondo-color">
 <header th:replace="layout/Nav :: header"></header>
 
-
 <div class="fondo-imagenes"> <!-- Contenedor para las imágenes -->
 
     <h1 class="titulo"> "La Pizza que Siempre Has Soñado"</h1> <!-- Título centrado -->
 
-    <p class="texto"> "Desde la base hasta la última capa de queso, cada elección es tuya. ¡Simplemente arrastra tus
-        ingredientes favoritos dentro de la pizza y comienza a crear! Disfruta de cada rebanada hecha a tu medida." </p>
+    <p class="texto"> "Desde la base hasta la última capa de queso, cada elección es tuya. ¡Simplemente arrastra tus ingredientes favoritos dentro de la pizza y comienza a crear! Disfruta de cada rebanada hecha a tu medida." </p>
 
-    <!-- Modificación aquí: Imagen de masa inicialmente oculta -->
-    <img id="imagen-masa" src="" alt="Imagen de masa" class="imagen-pizza" style="display: none;">
-
-
-    <img src="img/shape-5.png" alt="Descripción de la imagen 1" class="imagen-1">
-    <img src="img/shape-6.png" alt="Descripción de la imagen 2" class="imagen-2">
+    <!-- Contenedor central para las imágenes -->
+    <div class="contenedor-central">
+        <img id="imagen-masa" src="" alt="Imagen de masa" class="imagen-pizza" style="display: none;">
+        <img id="queso-imagen" src="" alt="Imagen de queso" class="queso" style="display: none;"> <!-- Imagen del queso -->
+        <img src="/img/shape-5.png" alt="Descripción de la imagen 1" class="imagen-1">
+        <img src="/img/shape-6.png" alt="Descripción de la imagen 2" class="imagen-2">
+    </div>
 
     <div class="contenedor-principal">
         <div class="seccion-masa" id="seccion-masa">
-            <h2>Selecciona la masa</h2>
+            <h2>1. Selecciona la masa</h2>
             <select id="masa-select"
                     onchange="actualizarMasaYTamanos(); actualizarFormularioOculto('pizza_masa', this.value);">
-                <option value="select">Seleccione una Masa</option>
-                <option value="tradicional">Tradicional</option>
-                <option value="italiana">Italiana</option>
-                <option value="queso">Queso</option>
-                <option value="pizza">Pan de Pizzas</option>
+                <option  style="font-size: 16px;"  value="select">Seleccione una Masa</option>
+                <option style="font-size: 16px;"value="tradicional">Tradicional</option>
+                <option style="font-size: 16px;"value="italiana">Italiana</option>
+                <option style="font-size: 16px;"value="queso">Queso</option>
+                <option style="font-size: 16px;"value="pizza">Pan de Pizzas</option>
             </select>
         </div>
 
         <div class="seccion-tamano" id="seccion-tamano">
-            <h2>Selecciona el tamaño</h2>
+            <h2><br>2. Selecciona el tamaño</h2>
             <select id="tamano-select"
                     onchange="actualizarFormularioOculto('pizza_tamano', this.value); actualizarTamano()" disabled>
                 <option value="select">Seleccione un Tamaño</option>
@@ -66,7 +66,7 @@
         </div>
 
         <div class="seccion-queso" id="seccion-queso">
-            <h2>Selecciona la cantidad <br>de queso</h2>
+            <h2><br>3. Selecciona la cantidad <br>de queso</h2>
             <select onchange="actualizarFormularioOculto('pizza_queso', this.value); actualizarQueso()">
                 <option value="">Seleccione cantidad</option> <!-- Opción vacía para iniciar -->
                 <option value="poco">Poco</option>
@@ -74,85 +74,82 @@
                 <option value="extra">Extra</option>
             </select>
         </div>
-        <!-- Imagen del queso -->
-        <img id="queso-imagen" src="" alt="Imagen de queso" class="queso" style="display: none;">
     </div>
+
     <div class="contenedor-secundario">
         <div id="seccion-carnes">
-            <h2>Selecciona las carnes</h2>
-            <label><input type="checkbox" value="molida"
-                          onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('molida')">
+            <h2>4. Selecciona las carnes</h2>
+            <label style="font-size: 16px;"><input type="checkbox" value="molida"
+                                                   onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('molida')">
                 Molida</label><br>
-            <label><input type="checkbox" value="pollo"
-                          onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('pollo')">
+            <label style="font-size: 16px;"><input type="checkbox" value="pollo"
+                                                   onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('pollo')">
                 Pollo</label><br>
-            <label><input type="checkbox" value="jamon"
-                          onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('jamon')">
+            <label style="font-size: 16px;"><input type="checkbox" value="jamon"
+                                                   onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('jamon')">
                 Jamón</label><br>
-            <label><input type="checkbox" value="tocino"
-                          onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('tocino')">
+            <label style="font-size: 16px;"><input type="checkbox" value="tocino"
+                                                   onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('tocino')">
                 Tocino</label><br>
-            <label><input type="checkbox" value="pepperoni"
-                          onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('pepperoni')">
+            <label style="font-size: 16px;"><input type="checkbox" value="pepperoni"
+                                                   onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('pepperoni')">
                 Pepperoni</label><br>
-            <label><input type="checkbox" value="italiana"
-                          onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('italiana')">
+            <label style="font-size: 16px;"><input type="checkbox" value="italiana"
+                                                   onchange="actualizarCheckbox('carnes', this.value, this.checked); actualizarCarnes('italiana')">
                 Salchicha Italiana</label><br>
         </div>
 
         <div id="seccion-ingredientes">
-            <h2>Selecciona los ingredientes</h2>
-            <label><input type="checkbox" value="cheddar"
-                          onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('cheddar')">
+            <h2><br>5. Selecciona los ingredientes</h2>
+            <label style="font-size: 16px;"><input type="checkbox" value="cheddar"
+                                                   onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('cheddar')">
                 Cheddar</label><br>
-            <label><input type="checkbox" value="pimiento"
-                          onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('pimiento')">
+            <label style="font-size: 16px;"><input type="checkbox" value="pimiento"
+                                                   onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('pimiento')">
                 Pimiento</label><br>
-            <label><input type="checkbox" value="champinon"
-                          onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('champinon')">
+            <label style="font-size: 16px;"><input type="checkbox" value="champinon"
+                                                   onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('champinon')">
                 Champiñón</label><br>
-            <label><input type="checkbox" value="pina"
-                          onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('pina')">
+            <label style="font-size: 16px;"><input type="checkbox" value="pina"
+                                                   onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('pina')">
                 Piña</label><br>
-            <label><input type="checkbox" value="cebolla"
-                          onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('cebolla')">
+            <label style="font-size: 16px;"><input type="checkbox" value="cebolla"
+                                                   onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('cebolla')">
                 Cebolla</label><br>
-            <label><input type="checkbox" value="aceituna"
-                          onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('aceituna')">
+            <label style="font-size: 16px;"><input type="checkbox" value="aceituna"
+                                                   onchange="actualizarCheckbox('ingredientes', this.value, this.checked); actualizarIngredientes('aceituna')">
                 Aceituna</label><br>
         </div>
 
         <!-- Imágenes de ingredientes -->
-        <img id="molida-imagen" src="img/carne500.png" alt="Molida" class="ingrediente-imagen" style="display: none;">
-        <img id="pollo-imagen" src="img/pollo500.png" alt="Pollo" class="ingrediente-imagen" style="display: none;">
-        <img id="jamon-imagen" src="img/jamon500.png" alt="Jamón" class="ingrediente-imagen" style="display: none;">
-        <img id="tocino-imagen" src="img/tocino500.png" alt="Tocino" class="ingrediente-imagen" style="display: none;">
-        <img id="pepperoni-imagen" src="img/peperoni500 (1).png" alt="Pepperoni" class="ingrediente-imagen"
+        <img id="molida-imagen" src="/img/carne500.png" alt="Molida" class="ingrediente-imagen" style="display: none;">
+        <img id="pollo-imagen" src="/img/pollo500.png" alt="Pollo" class="ingrediente-imagen" style="display: none;">
+        <img id="jamon-imagen" src="/img/jamon500.png" alt="Jamón" class="ingrediente-imagen" style="display: none;">
+        <img id="tocino-imagen" src="/img/tocino500.png" alt="Tocino" class="ingrediente-imagen" style="display: none;">
+        <img id="pepperoni-imagen" src="/img/peperoni500 (1).png" alt="Pepperoni" class="ingrediente-imagen"
              style="display: none;">
-        <img id="italiana-imagen" src="img/salchicha500.png" alt="Salchicha Italiana" class="ingrediente-imagen"
-             style="display: none;">
-
-        <img id="cheddar-imagen" src="img/cheddar500.png" alt="Cheddar" class="ingrediente-imagen" style="display: none;">
-        <img id="pimiento-imagen" src="img/pimiento500.png" alt="Pimiento" class="ingrediente-imagen"
-             style="display: none;">
-        <img id="champinon-imagen" src="img/champiñon500 (2).png" alt="Champiñón" class="ingrediente-imagen"
-             style="display: none;">
-        <img id="pina-imagen" src="img/pina500.png" alt="Piña" class="ingrediente-imagen" style="display: none;">
-        <img id="cebolla-imagen" src="img/cebolla500.png" alt="Cebolla" class="ingrediente-imagen" style="display: none;">
-        <img id="aceituna-imagen" src="img/aceituna500.png" alt="Aceituna" class="ingrediente-imagen"
+        <img id="italiana-imagen" src="/img/salchicha500.png" alt="Salchicha Italiana" class="ingrediente-imagen"
              style="display: none;">
 
-
+        <img id="cheddar-imagen" src="/img/cheddar500.png" alt="Cheddar" class="ingrediente-imagen" style="display: none;">
+        <img id="pimiento-imagen" src="/img/pimiento500.png" alt="Pimiento" class="ingrediente-imagen"
+             style="display: none;">
+        <img id="champinon-imagen" src="/img/champiñon500 (2).png" alt="Champiñón" class="ingrediente-imagen"
+             style="display: none;">
+        <img id="pina-imagen" src="/img/pina500.png" alt="Piña" class="ingrediente-imagen" style="display: none;">
+        <img id="cebolla-imagen" src="/img/cebolla500.png" alt="Cebolla" class="ingrediente-imagen" style="display: none;">
+        <img id="aceituna-imagen" src="/img/aceituna500.png" alt="Aceituna" class="ingrediente-imagen"
+             style="display: none;">
     </div>
 
-
     <div class="container">
-        <div class="d-flex justify-content-center" >
+        <div class="d-flex justify-content-center">
             <button type="button" onclick="enviarFormulario()" class="boton-enviar">Enviar Pizza</button>
         </div>
     </div>
     <br>
 </div>
+
 
 
 
@@ -188,5 +185,6 @@
 </form>
 
 <script th:src="@{/JavaScript/personaliza.js}"></script>
+
 </body>
 </html>

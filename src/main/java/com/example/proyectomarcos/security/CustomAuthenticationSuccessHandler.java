@@ -16,6 +16,8 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
             throws IOException, ServletException {
         if (authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"))) {
             response.sendRedirect("/admin/dashboard");  // Redirige a la página del administrador
+        } else if (authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_COOK"))){
+            response.sendRedirect("/cooker/adminMoni");
         } else {
             response.sendRedirect("/perfil");  // Redirige a la página de perfil para otros usuarios
         }

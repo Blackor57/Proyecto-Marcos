@@ -74,13 +74,14 @@ body {
     width: 1000px; /* Cambia este valor para ajustar el ancho */
 }
 .imagen-pizza {
-    display: block; /* Hace que la imagen se comporte como un bloque */
-    position: absolute; /* Posiciona la imagen en relación a su contenedor */
-    z-index: 10; /* Asegura que esté sobre las otras imágenes */
+    position: absolute; /* Permite superponer sobre el contenedor */
+    top: 55%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
-    align-items: center; /* Centra verticalmente */
-    top: 54%; /* Centra verticalmente */
+    width: auto; /* Mantiene proporciones */
+    height: auto; /* Mantiene proporciones */
+    z-index: 10; /* Asegura que esté encima de otras capas */
+    display: none; /* Inicialmente oculto */
 }
 
 .contenedor-principal {
@@ -100,9 +101,9 @@ body {
 
 .queso {
     position: absolute; /* Permite superponer sobre la pizza */
-    top: 52%; /* Ajustar según sea necesario */
-    left: 242%; /* Centra horizontalmente */
-    transform: translate(-30%, -35%); /* Asegura que esté centrado */
+    top: 55%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar completamente */
     width: auto; /* Mantiene proporciones */
     height: auto; /* Mantiene proporciones */
     z-index: 20; /* Asegura que esté encima */
@@ -112,7 +113,7 @@ body {
 select {
     width: 200px; /* Ajusta el ancho según sea necesario */
     height: 30px; /* Ajusta la altura según sea necesario */
-    font-size: 16px; /* Asegúrate de que el texto sea legible */
+    font-size: 16px !important; /* Asegúrate de que el texto sea legible */
 }
 
 
@@ -170,18 +171,18 @@ label{
 
 
 /* Ajusta las posiciones según sea necesario */
-#molida-imagen { top: 56%; left: -300px; }
-#pollo-imagen { top: 56%; left: -320px; }
-#jamon-imagen { top: 56%; left: -300px; }
-#tocino-imagen { top: 56%; left: -310px; }
-#pepperoni-imagen { top: 56%; left: -310px; }
-#italiana-imagen { top: 56%; left: -310px; }
-#cheddar-imagen { top: 56%; left: -300px; }
-#pimiento-imagen {top: 56%; left: -300px; }
-#champinon-imagen { top: 56%; left: -300px; }
-#pina-imagen {top: 56%; left: -300px; }
-#cebolla-imagen { top: 56%; left: -300px; }
-#aceituna-imagen { top: 56%; left: -300px; }
+#molida-imagen { top: 40%; left: -300px; }
+#pollo-imagen { top: 40%; left: -320px; }
+#jamon-imagen { top: 40%; left: -300px; }
+#tocino-imagen { top: 40%; left: -310px; }
+#pepperoni-imagen { top: 40%; left: -310px; }
+#italiana-imagen { top: 40%; left: -310px; }
+#cheddar-imagen { top: 40%; left: -300px; }
+#pimiento-imagen {top: 40%; left: -300px; }
+#champinon-imagen { top: 40%; left: -300px; }
+#pina-imagen {top: 40%; left: -300px; }
+#cebolla-imagen { top: 40%; left: -300px; }
+#aceituna-imagen { top: 40%; left: -300px; }
 
 
 
@@ -192,7 +193,7 @@ label{
 }
 
 .boton-enviar {
-    background-color: hsl(37, 50%, 76%); /* Color de fondo */
+    background-color: hsl(37, 70%, 49%); /* Color de fondo */
     color: #ffffff; /* Texto blanco */
     font-size: 18px; /* Tamaño de fuente */
     padding: 10px 20px; /* Espaciado interno */
@@ -200,9 +201,25 @@ label{
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     transition: background-color 0.3s ease; /* Transición suave para cambios de color */
+    transition: color 0.5s ease;
     border-bottom: 3px solid hsl(37, 70%, 66%); /* Borde inferior */
 }
 
 .boton-enviar:hover {
     background-color: hsl(37, 70%, 66%); /* Color más claro al pasar el mouse */
+    color:#000000;
+}
+
+.contenedor-central {
+    position: relative; /* Permite posicionar elementos hijos */
+    width: 100%; /* O el ancho deseado */
+    height: auto; /* Ajusta según sea necesario */
+    display: flex; /* Para centrar los elementos hijos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.imagen-pizza, .queso {
+    position: absolute; /* Permite superponer las imágenes */
+    z-index: 10; /* Asegura que estén por encima de otras capas */
 }
