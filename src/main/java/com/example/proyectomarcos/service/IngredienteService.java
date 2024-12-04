@@ -29,5 +29,4 @@ public class IngredienteService {
         ingr.deleteById(id);
     }
 
-
 }
