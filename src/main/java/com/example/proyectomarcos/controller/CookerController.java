@@ -64,6 +64,6 @@ public class CookerController {
         manejable.setEstado(estado);
         iDetPizza.save(manejable);
 
-        return "redirect:/admin/adminMoni";
+        return "redirect:/cooker/adminMoni";
     }
 }
