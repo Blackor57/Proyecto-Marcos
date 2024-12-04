@@ -7,17 +7,17 @@ body {
   background-color: #f4f4f4;
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;    
+  margin-right: 320px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px;
-  height: 100vh; 
+  height: 100vh;
   flex-grow: 1;
 }
 
@@ -171,6 +171,60 @@ body {
   transform: scale(0.8);
 }
 
+.sidebar-right {
+  position: fixed; /* Fija la barra lateral */
+  top: 0;
+  right: 0;
+  width: 300px; /* Ajusta el ancho de la barra lateral */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-color: #f4f4f4; /* Fondo sólido */
+  padding: 20px;
+  z-index: 1050; /* Asegura que la barra esté encima de las tablas */
+  overflow-y: auto; /* Permite scroll si el contenido es mayor que la altura visible */
+}
+
+.sidebar-right h3 {
+  font-size: 1.5rem;
+  color: #d31900;
+  margin-bottom: 20px;
+}
+
+.sidebar-right p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.sidebar-right b {
+  font-weight: bold;
+}
+
+/* Ajuste del contenido principal */
+.main-content {
+  margin-right: 320px; /* Deja espacio para la barra lateral derecha */
+}
+
+.table-responsive {
+  max-width: calc(100% - 320px); /* Ajusta el ancho para dejar espacio a la barra lateral */
+  margin-right: 20px; /* Deja un pequeño margen a la derecha */
+}
+
+@media (max-width: 1060px) {
+  .main-content {
+    margin-right: 0; /* Elimina el margen para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 1060px) {
+  .sidebar-right {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    right: 0;
+    padding: 10px;
+  }
+}
+
 /* Responsividad */
 @media (max-width: 1060px) {
   .row {
@@ -226,8 +280,8 @@ body {
     width: 100%;
     padding: 10px;
     margin-left: 0;
-    margin-top: 60px; 
-    z-index: 999; 
+    margin-top: 60px;
+    z-index: 999;
   }
 
   .card-container {
@@ -236,4 +290,6 @@ body {
     width: 100%;
     justify-content: center;
   }
+
+
 }

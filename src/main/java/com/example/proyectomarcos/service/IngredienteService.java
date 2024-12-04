@@ -28,4 +28,5 @@ public class IngredienteService {
     public void deleteIngredienteById(Integer id) {
         ingr.deleteById(id);
     }
+
 }

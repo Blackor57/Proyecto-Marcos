@@ -1,6 +1,7 @@
 package com.example.proyectomarcos.security;
 
 import com.example.proyectomarcos.service.UsuarioServicio;
+import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,14 +13,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+
 @Configuration
+@AllArgsConstructor
 public class SecurityConfiguration {
 
     private final UsuarioServicio usuarioServicio;
-
-    public SecurityConfiguration(UsuarioServicio usuarioServicio) {
-        this.usuarioServicio = usuarioServicio;
-    }
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider(BCryptPasswordEncoder passwordEncoder) {
@@ -35,21 +34,22 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/", "/index", "/about/**", "/order",
-                                "/personaliza/**", "/reclamation", "/rewards",
-                                "/comprar/**","/admin" , "/registro/**", "/JavaScript/**",
+    public SecurityFilterChain securityFilterChain(HttpSecurity http, CustomAuthenticationSuccessHandler successHandler) throws Exception {
+        return http
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/","/public/**", "/about/**","/comprar/**",
+                                "/registro/**","/personaliza/**","/JavaScript/**",
                                 "/Styles/**", "/img/**").permitAll()
                         .requestMatchers("/perfil").authenticated()
+                        .requestMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
+                        .requestMatchers("/cooker/**").hasAuthority("ROLE_COOK")
                         .anyRequest().authenticated()
                 )
-                .formLogin(formLogin -> formLogin
-                        .loginPage("/registro") // Página de login/registro combinada
+                .formLogin(form -> form
+                        .loginPage("/registro") // Página personalizada de login/registro
                         .loginProcessingUrl("/login")
                         .failureUrl("/registro?loginError=true") // Maneja errores de login
-                        .defaultSuccessUrl("/perfil", true)
+                        .successHandler(successHandler)  // Usa el handler personalizado para la redirección
                         .permitAll()
                 )
                 .logout(logout -> logout
@@ -58,10 +58,9 @@ public class SecurityConfiguration {
                         .invalidateHttpSession(true)
                         .clearAuthentication(true)
                         .permitAll()
-                );
-        return http.build();
+                )
+                .build();
     }
-
 
     @Bean
     public UserDetailsService userDetailsService() {

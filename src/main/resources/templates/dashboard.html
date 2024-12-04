@@ -14,17 +14,7 @@
   <div class="container-fluid">
     <div class="row flex-nowrap"> <!-- Flexbox para garantizar que sidebar y main estén en fila -->
       <!-- Sidebar -->
-      <nav class="col-12 col-md-3 sidebar">
-        <h4>Panel de Ventas</h4>
-        <a class="nav-link" href="#"><i class="fas fa-home"></i> Dashboard</a>
-        <a class="nav-link" href="#"><i class="fas fa-pizza-slice"></i> Menú</a>
-        <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Reportes de Ventas</a>
-
-        <!-- Logotipo dentro del Sidebar, al final en modo vertical -->
-        <div class="logotipo-container">
-          <img src="/img/favicon.png" alt="Logotipo" class="img-fluid logotipo">
-        </div>
-      </nav>
+      <nav th:replace="layout/Nav_Admin"></nav>
 
       <!-- Main content -->
       <main class="col-12 col-md-9 main-content">

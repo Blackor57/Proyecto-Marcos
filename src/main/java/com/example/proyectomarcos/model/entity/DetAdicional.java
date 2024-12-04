@@ -12,12 +12,6 @@ public class DetAdicional {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "cantidad", nullable = false)
-    private int cantidad;
-
-    @Column(name = "subtotal")
-    private double subtotal;
-
     @ManyToOne
     @JoinColumn(name = "id_adicional", nullable = false)
     private Adicional adicional;
