@@ -34,4 +34,8 @@ public interface IDetPizza extends JpaRepository<DetPizza,Integer> {
     // Obtener todas las DetPizza por estado "Terminado" y filtrar por DNI
     @Query("SELECT d FROM DetPizza d WHERE d.estado = 'Terminado' AND d.orden.dni = :dni")
     List<DetPizza> findAllByEstadoTerminadoAndDni(@Param("dni") String dni);
+
+    // Obtener todas las DetPizza por ordenId
+    @Query("SELECT d FROM DetPizza d WHERE d.orden.id = :ordenId")
+    List<DetPizza> findAllByOrdenId(@Param("ordenId") Integer ordenId);
 }

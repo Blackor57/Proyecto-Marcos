@@ -234,6 +234,13 @@ li::marker{
     border-width: 1px;
 }
 
+.custom-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 @media only screen and (max-width: 576px) {
     .footersubmenuopciones label {

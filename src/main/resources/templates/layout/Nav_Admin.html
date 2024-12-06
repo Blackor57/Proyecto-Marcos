@@ -1,15 +1,18 @@
 <nav class="col-12 col-md-3 sidebar" th:fragment="Admin_Nav" xmlns:sec="http://www.w3.org/1999/xhtml">
     <h4>Panel de Ventas</h4>
-    <a class="nav-link"  th:href="@{/public/index}">
+    <a class="nav-link"  th:href="@{/public/index}" sec:authorize="hasRole('ROLE_ADMIN')">
         <i class="fas fa-home"></i> Inicio
     </a>
     <a class="nav-link"  th:href="@{/admin/dashboard}" sec:authorize="hasRole('ROLE_ADMIN')">
         <i class="fa fa-tachometer"></i> Dashboard
     </a>
+    <a class="nav-link"  th:href="@{/admin/orders}" sec:authorize="hasRole('ROLE_ADMIN')">
+        <i class="fa fa-list"></i> Lista de Ordenes
+    </a>
     <a class="nav-link"  th:href="@{/cooker/adminMoni}" sec:authorize="hasRole('ROLE_COOK')">
         <i class="fas fa-pizza-slice"></i> Ordenes
     </a>
-    <a class="nav-link"  href="#" sec:authorize="hasRole('ROLE_ADMIN')">
+    <a class="nav-link"  th:href="@{/admin/ventas}" sec:authorize="hasRole('ROLE_ADMIN')">
         <i class="fas fa-chart-line"></i> Reportes de Ventas
     </a>
     <a class="nav-link"

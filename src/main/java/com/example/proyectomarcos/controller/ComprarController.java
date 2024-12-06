@@ -132,7 +132,8 @@ public class ComprarController {
 
         listaAdi.clear();
         listaPizzas.clear();
-        return "/index";
+
+        return "redirect:/public/factura?idOrden=" + orden.getId();
     }
 
     @PostMapping("/agregarProducto/{id}")

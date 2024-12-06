@@ -26,5 +26,41 @@ public class HomeController {
         return "dashboard";
     }
 
+    @GetMapping("/orders")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String orders(Model model) {
 
+        List<DetPizza> pizzasPreparando = iDetPizza.findAllByEstadoPreparando();
+        List<DetPizza> pizzasHorno = iDetPizza.findAllByEstadoEnHorno();
+        List<DetPizza> pizzasTerminado = iDetPizza.findAllByEstadoTerminado();
+
+        model.addAttribute("listaPreparando", pizzasPreparando);
+        model.addAttribute("listaHorno", pizzasHorno);
+        model.addAttribute("listaTerminado", pizzasTerminado);
+
+        return "OrdersAdmin";
+    }
+
+
+    @GetMapping("/ventas")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    public String ventas(Model model) {
+
+        LocalDate hoy = LocalDate.now();
+        List<Orden> listaOrden = ordenService.getAllOrdenes();
+        List<Orden> ordenesHoy = listaOrden.stream()
+                .filter(orden -> orden.getHora() != null && orden.getHora().toLocalDate().equals(hoy))
+                .collect(Collectors.toList());
+
+
+        double total = 0.0;
+        for (Orden o : ordenesHoy) {
+            total += o.getMonto();
+        }
+
+        model.addAttribute("ordenes", ordenesHoy);
+        model.addAttribute("total", total);
+
+        return "ventas";
+    }
 }

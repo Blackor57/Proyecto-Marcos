@@ -35,7 +35,7 @@
                             </thead>
                             <tbody>
                             <tr th:each="pizza : ${preparandoList}">
-                                <td th:text="${pizza.id}"></td>
+                                <td th:text="${pizza.orden.id}"></td>
                                 <td th:text="${pizza.orden.nombre}"></td>
                                 <td th:text="${pizza.pizza.tamano}"></td>
                                 <td>
@@ -67,7 +67,7 @@
                             </thead>
                             <tbody>
                             <tr th:each="pizza : ${hornoList}">
-                                <td th:text="${pizza.id}"></td>
+                                <td th:text="${pizza.orden.id}"></td>
                                 <td th:text="${pizza.orden.nombre}"></td>
                                 <td th:text="${pizza.pizza.tamano}"></td>
                                 <td>
@@ -99,7 +99,7 @@
                             </thead>
                             <tbody>
                             <tr th:each="pizza : ${terminadoList}">
-                                <td th:text="${pizza.id}"></td>
+                                <td th:text="${pizza.orden.id}"></td>
                                 <td th:text="${pizza.orden.nombre}"></td>
                                 <td th:text="${pizza.pizza.tamano}"></td>
                                 <td>

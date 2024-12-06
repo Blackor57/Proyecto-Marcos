@@ -34,3 +34,16 @@ function mostrarTodosLosProductos() {
         item.style.display = 'block';
     }
 }
+
+document.querySelectorAll('.categoria-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const categoria = button.getAttribute('data-categoria');
+        document.querySelectorAll('.item').forEach(item => {
+            if (item.getAttribute('data-categoria') === categoria || categoria === 'todos') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});

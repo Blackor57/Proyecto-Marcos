@@ -43,7 +43,7 @@ public class CookerController {
 
     @GetMapping("/adminMoni/ver/{id}/{idOrden}")
     public String verPizza(Model model, @PathVariable Integer id, @PathVariable Integer idOrden) {
-        DetPizza visualizar = iDetPizza.getById(id);  // Cargar la pizza por id
+        DetPizza visualizar = iDetPizza.getById(id);
         List<DetPizza> terminados = iDetPizza.findAllByEstadoTerminado();
         List<DetPizza> enHorno = iDetPizza.findAllByEstadoEnHorno();
         List<DetPizza> preparando = iDetPizza.findAllByEstadoPreparando();
@@ -52,10 +52,11 @@ public class CookerController {
         model.addAttribute("terminadoList", terminados);
         model.addAttribute("hornoList", enHorno);
         model.addAttribute("preparandoList", preparando);
-        model.addAttribute("pizzaVisible", visualizar);  // Aquí es donde pasas la pizzaVisible al modelo
+        model.addAttribute("pizzaVisible", visualizar);
         model.addAttribute("detAdis", detAdicionales);
+        model.addAttribute("idOrden", idOrden);
 
-        return "monitoreo";  // Asegúrate de que este es el nombre correcto de tu vista
+        return "monitoreo";
     }
 
     @PostMapping("/adminMoni/{estado}/{id}")

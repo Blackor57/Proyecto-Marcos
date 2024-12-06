@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 80%;
 }
 
 main {
@@ -42,13 +42,35 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    overflow: scroll;
+    overflow: auto;
 }
 
+.list-group-item {
+    background-color: #f8f9fa; /* Color claro para contraste */
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef; /* Efecto hover */
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+
+.card {
+    max-height: 600px;
+    overflow-y: scroll;
+    border-radius: 1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
 
 .list__item {
     width: 100%;
-    min-height: 75px; !important;
+    height: auto;
     background-color: var(--primary-color);
     color: #fff;
     border-radius: 1rem;
@@ -88,14 +110,12 @@ main {
 
 .button__container {
     width: 100%;
-    padding: 3rem 6rem;
+    padding: 3rem 5rem;
     display: flex;
-    gap: 30px;
     justify-content: flex-end;
 }
 
-.button__container button,
-.button__container a{
+.button__container button {
     border: none;
     border-radius: 1rem;
     background-color: #4f6bc5;
@@ -104,8 +124,4 @@ main {
     color: #fff;
     font-weight: bold;
     box-shadow: 5px 3px 9px 1px rgba(0,0,0,0.75);
-}
-
-.button__container form button{
-    background-color: #4f6bc5;
 }

@@ -43,7 +43,7 @@
             <h3>Productos Adicionales</h3>
             <div class="list__container" id="list2">
                 <div th:each="adi : ${listaAdi}" class="list__item" draggable="true">
-                    <img th:src="@{adi.url_imagen}" alt="Pizza Imagen" draggable="false">
+                    <img th:src="@{${adi.url_imagen}}" alt="" draggable="false">
                     <div>
                         <p><b>Producto:</b><br th:text="${adi.descripcion}"></p>
                         <p><b>Categoría:</b><br th:text="${adi.categoria}"></p>
@@ -62,7 +62,7 @@
         <form th:action="@{/comprar/borrarLista}" method="post" style="display:inline;">
             <button type="submit">Vaciar pedido</button>
         </form>
-        <form th:action="@{/comprar/ordenar}" method="post" style="display:inline;">
+        <form th:action="@{/comprar/ordenar}" method="post" style="display:inline;" th:href="@{/public/factura}">
             <button type="submit">Ordenar</button>
         </form>
     </div>
