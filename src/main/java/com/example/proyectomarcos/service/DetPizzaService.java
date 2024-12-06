@@ -51,4 +51,15 @@ public class DetPizzaService {
         return null;
     }
 
+    public int contarDetPizza(Integer id){
+
+        int total = 0;
+        List<DetPizza> listaPizzas = IDetPizza.findAllByOrdenId(id);
+        for (DetPizza dp : listaPizzas) {
+            total ++;
+        }
+
+        return total;
+    }
+
 }

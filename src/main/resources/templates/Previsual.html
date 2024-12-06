@@ -40,6 +40,9 @@
             </div>
         </div>
         <div>
+            <h3>Precio Total: S/ <span th:text="${precio}">0.0</span></h3>
+        </div>
+        <div>
             <h3>Productos Adicionales</h3>
             <div class="list__container" id="list2">
                 <div th:each="adi : ${listaAdi}" class="list__item" draggable="true">

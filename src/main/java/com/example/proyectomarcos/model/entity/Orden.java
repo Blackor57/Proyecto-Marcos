@@ -3,6 +3,8 @@ package com.example.proyectomarcos.model.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 @Table(name = "ordenes")
@@ -26,4 +28,7 @@ public class Orden {
 
     @Column(name = "dni")
     private String dni;
+
+    @Column(name = "fec_orden")
+    private LocalDateTime hora;
 }

@@ -45,7 +45,7 @@ public class Usuario {
     private String password;
 
     @Column(name = "star")
-    private String star;
+    private int star;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "usuarios_roles",

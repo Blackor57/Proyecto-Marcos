@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,8 +68,17 @@ public class ComprarController {
     public String previsual(Model model,
                             @ModelAttribute("listaPizzas") List<Pizza> listaPizzas,
                             @ModelAttribute("listaAdi") List<Adicional> listaAdi) {
+
+        Double precio = 0.0;
+        for (Pizza p : listaPizzas) {
+           precio += 20.00;
+        }
+        for (Adicional a : listaAdi) {
+            precio += a.getPrecio();
+        }
         model.addAttribute("listaPizzas", listaPizzas);
         model.addAttribute("listaAdi", listaAdi);
+        model.addAttribute("precio", precio);
         return "previsual";
     }
 
@@ -89,20 +99,20 @@ public class ComprarController {
         Usuario usuario = usuarioServicio.buscarPorEmail(email);
         if (usuario == null) {
             orden.setDni("12345678");
+            orden.setNombre("Anonimo");
         } else {
-        orden.setDni(usuario.getDni());
+            orden.setDni(usuario.getDni());
+            orden.setNombre(usuario.getNombre());
         }
-        orden.setNombre("Prueba");
         orden.setEstado("Pendiente");
-        orden.setMonto(100.00);
         orden.setMetodo("Tarjeta");
-
+        orden.setHora(LocalDateTime.now());
         ordenService.save(orden);
-
+        Double montoTotal = 0.0;
         for (Pizza p : listaPizzas) {
 
             DetPizza detPizza = new DetPizza();
-
+            montoTotal += 20;
             Integer idPizza;
             do {
                 idPizza = detPizzaService.verificarPizza(p);
@@ -120,7 +130,7 @@ public class ComprarController {
 
         }
         for (Adicional a : listaAdi) {
-
+            montoTotal += a.getPrecio();
             DetAdicional detAdi = new DetAdicional();
             detAdi.setAdicional(a);
             detAdi.setOrden(orden);
@@ -129,7 +139,15 @@ public class ComprarController {
 
         }
 
+        if (usuario != null) {
+            LOGGER.info("Monto total: {}",montoTotal);
+            int estrellas = montoTotal.intValue() / 4;
+            LOGGER.info("Estrellas: {}",estrellas);
+            usuario.setStar(usuario.getStar() + estrellas);
+        }
 
+        orden.setMonto(montoTotal);
+        ordenService.save(orden);
         listaAdi.clear();
         listaPizzas.clear();
 
@@ -146,8 +164,20 @@ public class ComprarController {
 
         model.addAttribute("listaPizzas", listaPizzas);
         model.addAttribute("listaAdi", listaAdicionales);
-        return "previsual";
+        return "redirect:/comprar/previsual";
     }
 
+    @PostMapping("/agregarPizza/{id}")
+    public String agregarPizza(@ModelAttribute("listaAdi") List<Adicional> listaAdicionales,
+                                  @ModelAttribute("listaPizzas") List<Pizza> listaPizzas,
+                                  @PathVariable Integer id,
+                                  Model model){
+        Pizza pizza = pizzaService.getPizzaById(id).get();
+        listaPizzas.add(pizza);
+
+        model.addAttribute("listaPizzas", listaPizzas);
+        model.addAttribute("listaAdi", listaAdicionales);
+        return "redirect:/comprar/previsual";
+    }
 
 }
