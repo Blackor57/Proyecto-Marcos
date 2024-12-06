@@ -51,7 +51,7 @@
                 <img th:src="${bebida.url_imagen}" alt="" class="img-item">
                 <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(bebida.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
                 <form th:action="@{/comprar/agregarProducto/{id}(id=${bebida.getId()})}" method="post" class="d-inline">
-                    <button type="submit" class="boton-item">Ver</button>
+                    <button type="submit" class="boton-item">Añadir</button>
                 </form>
             </div>
 
@@ -62,7 +62,7 @@
                 <img th:src="${vino.url_imagen}" alt="" class="img-item">
                 <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(vino.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
                 <form th:action="@{/comprar/agregarProducto/{id}(id=${vino.getId()})}" method="post" class="d-inline">
-                    <button type="submit" class="boton-item">Ver</button>
+                    <button type="submit" class="boton-item">Añadir</button>
                 </form>
             </div>
 
@@ -73,7 +73,7 @@
                 <img th:src="${coctel.url_imagen}" alt="" class="img-item">
                 <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(coctel.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
                 <form th:action="@{/comprar/agregarProducto/{id}(id=${coctel.getId()})}" method="post" class="d-inline">
-                    <button type="submit" class="boton-item">Ver</button>
+                    <button type="submit" class="boton-item">Añadir</button>
                 </form>
             </div>
 
@@ -265,7 +265,7 @@
                 <img th:src="${postre.url_imagen}" alt="" class="img-item">
                 <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(postre.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
                 <form th:action="@{/comprar/agregarProducto/{id}(id=${postre.getId()})}" method="post" class="d-inline">
-                    <button type="submit" class="boton-item">Ver</button>
+                    <button type="submit" class="boton-item">Añadir</button>
                 </form>
             </div>
 
@@ -281,7 +281,7 @@
                 <img th:src="${utensilio.url_imagen}" alt="" class="img-item">
                 <span class="precio-item" th:text="${'S/. ' + #numbers.formatDecimal(utensilio.precio, 0, 'COMMA', 2, 'POINT')}">S/. 0.00</span>
                 <form th:action="@{/comprar/agregarProducto/{id}(id=${utensilio.getId()})}" method="post" class="d-inline">
-                    <button type="submit" class="boton-item">Ver</button>
+                    <button type="submit" class="boton-item">Añadir</button>
                 </form>
             </div>
 
